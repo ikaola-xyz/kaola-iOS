@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.8.0)
-  - ESPullToRefresh (2.7)
   - Kingfisher (4.10.1)
   - Material (2.16.4):
     - Material/Core (= 2.16.4)
@@ -11,16 +10,14 @@ PODS:
   - Motion/Core (1.4.3)
   - ObjectMapper (3.3.0)
   - Pageboy (2.6.1)
-  - PromiseKit (4.5.2):
-    - PromiseKit/Foundation (= 4.5.2)
-    - PromiseKit/QuartzCore (= 4.5.2)
-    - PromiseKit/UIKit (= 4.5.2)
-  - PromiseKit/CorePromise (4.5.2)
-  - PromiseKit/Foundation (4.5.2):
+  - PromiseKit (6.8.3):
+    - PromiseKit/CorePromise (= 6.8.3)
+    - PromiseKit/Foundation (= 6.8.3)
+    - PromiseKit/UIKit (= 6.8.3)
+  - PromiseKit/CorePromise (6.8.3)
+  - PromiseKit/Foundation (6.8.3):
     - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.5.2):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.5.2):
+  - PromiseKit/UIKit (6.8.3):
     - PromiseKit/CorePromise
   - Realm (3.11.2):
     - Realm/Headers (= 3.11.2)
@@ -38,12 +35,11 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
-  - ESPullToRefresh (~> 2.4)
   - Kingfisher (~> 4.0)
   - Material (~> 2.0)
   - ObjectMapper (= 3.3)
   - Pageboy (~> 2.6)
-  - PromiseKit (~> 4.0)
+  - PromiseKit (~> 6.8)
   - RealmSwift (~> 3.11.1)
   - SideMenu
   - SnapKit (~> 4.0.0)
@@ -56,7 +52,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - ESPullToRefresh
     - Kingfisher
     - Material
     - Motion
@@ -75,13 +70,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  ESPullToRefresh: 119e2710b82b75536aab2bbe4883ba119fca35c8
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Pageboy: c2a25d1c280e9b622014b692626f1ff9298e0ad2
-  PromiseKit: 743e497a5f505a470d3bbbf4ce0663c1268af0a4
+  PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
   Realm: 864477d028db77f7c5a0cba64a4892ad53db128a
   RealmSwift: 12b8262fc08020b47de4fd88eb3d5c9425b34ec7
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
@@ -92,6 +86,6 @@ SPEC CHECKSUMS:
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   WechatOpenSDK: 3117412f8aafde4758cac1e8d20b93c67cafcfef
 
-PODFILE CHECKSUM: 4e9aadc737a60fdbc6416715765bd1992fbd159a
+PODFILE CHECKSUM: d4f2860fb02bfa8911d054b39d10c670f08ded3f
 
 COCOAPODS: 1.5.3

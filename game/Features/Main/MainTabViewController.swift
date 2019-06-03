@@ -12,7 +12,7 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
 
     let titles = ["首页","推荐","社区","我的"]
     
-    let v1 = MineViewController()
+    let v1 = IndexViewController()
     let v2 = MineViewController()
     let v3 = MineViewController()
     let v4 = MineViewController()

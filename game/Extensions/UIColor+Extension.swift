@@ -31,6 +31,10 @@ public extension UIColor{
         return UIColor(rgba: "#666666")
     }
     
+    public class func border() -> UIColor{
+        return UIColor(rgba: "#aaaaaa").withAlphaComponent(0.30)
+    }
+    
     convenience init(rgba: String) {
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0

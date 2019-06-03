@@ -12,8 +12,11 @@ class MineViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let model = StrategyModel()
+        model.getAll { (results) in
+            print(results[0].title)
+        }
     }
     
 

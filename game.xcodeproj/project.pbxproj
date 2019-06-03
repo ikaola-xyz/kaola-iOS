@@ -17,6 +17,18 @@
 		07D57C9922A10C5000B4E8B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D57C9822A10C5000B4E8B8 /* Assets.xcassets */; };
 		07D57C9C22A10C5000B4E8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D57C9A22A10C5000B4E8B8 /* LaunchScreen.storyboard */; };
 		07D57CA422A10F9500B4E8B8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 07D57CA322A10F9500B4E8B8 /* .gitignore */; };
+		07D57CA722A4BDA900B4E8B8 /* ApiUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CA622A4BDA900B4E8B8 /* ApiUtils.swift */; };
+		07D57CAA22A4BEAD00B4E8B8 /* Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CA922A4BEAD00B4E8B8 /* Strategy.swift */; };
+		07D57CAD22A4EAE900B4E8B8 /* StrategyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CAC22A4EAE900B4E8B8 /* StrategyModel.swift */; };
+		07D57CB122A4FC6F00B4E8B8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CB022A4FC6F00B4E8B8 /* TableViewController.swift */; };
+		07D57CB322A4FFEF00B4E8B8 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CB222A4FFEF00B4E8B8 /* UITableView+Extension.swift */; };
+		07D57CB522A5002000B4E8B8 /* ToolBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CB422A5002000B4E8B8 /* ToolBarViewController.swift */; };
+		07D57CB722A5006200B4E8B8 /* UIView+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CB622A5006200B4E8B8 /* UIView+Extenstion.swift */; };
+		07D57CBA22A500C500B4E8B8 /* Demins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CB922A500C500B4E8B8 /* Demins.swift */; };
+		07D57CBC22A504D900B4E8B8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CBB22A504D900B4E8B8 /* UIViewController+Extension.swift */; };
+		07D57CBF22A5056E00B4E8B8 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CBE22A5056E00B4E8B8 /* IndexViewController.swift */; };
+		07D57CC122A507A800B4E8B8 /* IndexPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CC022A507A800B4E8B8 /* IndexPresenter.swift */; };
+		07D57CC422A5094A00B4E8B8 /* StrategyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CC322A5094A00B4E8B8 /* StrategyCell.swift */; };
 		3895A5A46C2833C820EA3001 /* Pods_game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BAA3309071C1EB1632784D /* Pods_game.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +45,18 @@
 		07D57C9B22A10C5000B4E8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07D57C9D22A10C5000B4E8B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07D57CA322A10F9500B4E8B8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		07D57CA622A4BDA900B4E8B8 /* ApiUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUtils.swift; sourceTree = "<group>"; };
+		07D57CA922A4BEAD00B4E8B8 /* Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strategy.swift; sourceTree = "<group>"; };
+		07D57CAC22A4EAE900B4E8B8 /* StrategyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyModel.swift; sourceTree = "<group>"; };
+		07D57CB022A4FC6F00B4E8B8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		07D57CB222A4FFEF00B4E8B8 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		07D57CB422A5002000B4E8B8 /* ToolBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarViewController.swift; sourceTree = "<group>"; };
+		07D57CB622A5006200B4E8B8 /* UIView+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extenstion.swift"; sourceTree = "<group>"; };
+		07D57CB922A500C500B4E8B8 /* Demins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demins.swift; sourceTree = "<group>"; };
+		07D57CBB22A504D900B4E8B8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		07D57CBE22A5056E00B4E8B8 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		07D57CC022A507A800B4E8B8 /* IndexPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPresenter.swift; sourceTree = "<group>"; };
+		07D57CC322A5094A00B4E8B8 /* StrategyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyCell.swift; sourceTree = "<group>"; };
 		8DF75DF19626E04F1029B8D0 /* Pods-game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-game.release.xcconfig"; path = "Pods/Target Support Files/Pods-game/Pods-game.release.xcconfig"; sourceTree = "<group>"; };
 		E0FEB0808BD87878AC760980 /* Pods-game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-game.debug.xcconfig"; path = "Pods/Target Support Files/Pods-game/Pods-game.debug.xcconfig"; sourceTree = "<group>"; };
 		E7BAA3309071C1EB1632784D /* Pods_game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +77,7 @@
 		079074D322A4265800EECD2D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				07D57CBD22A5055E00B4E8B8 /* Index */,
 				079074DA22A42C9E00EECD2D /* Base */,
 				079074D722A4270A00EECD2D /* Mine */,
 				079074D422A426A500EECD2D /* Main */,
@@ -80,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				079074DB22A42CB600EECD2D /* BaseViewController.swift */,
+				07D57CB022A4FC6F00B4E8B8 /* TableViewController.swift */,
+				07D57CB422A5002000B4E8B8 /* ToolBarViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -88,6 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				079074DE22A42D1A00EECD2D /* UIColor+Extension.swift */,
+				07D57CB222A4FFEF00B4E8B8 /* UITableView+Extension.swift */,
+				07D57CB622A5006200B4E8B8 /* UIView+Extenstion.swift */,
+				07D57CBB22A504D900B4E8B8 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -114,6 +144,11 @@
 		07D57C9022A10C4D00B4E8B8 /* game */ = {
 			isa = PBXGroup;
 			children = (
+				07D57CC222A508FE00B4E8B8 /* Cells */,
+				07D57CB822A500BB00B4E8B8 /* Res */,
+				07D57CAB22A4EAD600B4E8B8 /* Models */,
+				07D57CA822A4BE9A00B4E8B8 /* Entities */,
+				07D57CA522A4BD6A00B4E8B8 /* Utils */,
 				079074DD22A42CF200EECD2D /* Extensions */,
 				079074D322A4265800EECD2D /* Features */,
 				07D57C9122A10C4D00B4E8B8 /* AppDelegate.swift */,
@@ -124,6 +159,55 @@
 				07D57C9D22A10C5000B4E8B8 /* Info.plist */,
 			);
 			path = game;
+			sourceTree = "<group>";
+		};
+		07D57CA522A4BD6A00B4E8B8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				07D57CA622A4BDA900B4E8B8 /* ApiUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		07D57CA822A4BE9A00B4E8B8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				07D57CA922A4BEAD00B4E8B8 /* Strategy.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		07D57CAB22A4EAD600B4E8B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07D57CAC22A4EAE900B4E8B8 /* StrategyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07D57CB822A500BB00B4E8B8 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				07D57CB922A500C500B4E8B8 /* Demins.swift */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
+		07D57CBD22A5055E00B4E8B8 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				07D57CBE22A5056E00B4E8B8 /* IndexViewController.swift */,
+				07D57CC022A507A800B4E8B8 /* IndexPresenter.swift */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		07D57CC222A508FE00B4E8B8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				07D57CC322A5094A00B4E8B8 /* StrategyCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7862999B0805FD456DF18033 /* Pods */ = {
@@ -244,9 +328,6 @@
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -259,9 +340,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -278,12 +356,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D57CB522A5002000B4E8B8 /* ToolBarViewController.swift in Sources */,
+				07D57CB322A4FFEF00B4E8B8 /* UITableView+Extension.swift in Sources */,
+				07D57CC422A5094A00B4E8B8 /* StrategyCell.swift in Sources */,
+				07D57CAD22A4EAE900B4E8B8 /* StrategyModel.swift in Sources */,
+				07D57CBC22A504D900B4E8B8 /* UIViewController+Extension.swift in Sources */,
 				079074DC22A42CB600EECD2D /* BaseViewController.swift in Sources */,
 				07D57C9422A10C4D00B4E8B8 /* ViewController.swift in Sources */,
+				07D57CB722A5006200B4E8B8 /* UIView+Extenstion.swift in Sources */,
+				07D57CB122A4FC6F00B4E8B8 /* TableViewController.swift in Sources */,
 				07D57C9222A10C4D00B4E8B8 /* AppDelegate.swift in Sources */,
+				07D57CC122A507A800B4E8B8 /* IndexPresenter.swift in Sources */,
 				079074DF22A42D1A00EECD2D /* UIColor+Extension.swift in Sources */,
+				07D57CAA22A4BEAD00B4E8B8 /* Strategy.swift in Sources */,
+				07D57CBF22A5056E00B4E8B8 /* IndexViewController.swift in Sources */,
 				079074D622A426CC00EECD2D /* MainTabViewController.swift in Sources */,
+				07D57CBA22A500C500B4E8B8 /* Demins.swift in Sources */,
 				079074D922A4271600EECD2D /* MineViewController.swift in Sources */,
+				07D57CA722A4BDA900B4E8B8 /* ApiUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JS6L6J8588;
 				INFOPLIST_FILE = game/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,6 +543,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JS6L6J8588;
 				INFOPLIST_FILE = game/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

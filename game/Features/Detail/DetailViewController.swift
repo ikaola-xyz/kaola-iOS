@@ -47,21 +47,30 @@ class DetailViewController: ToolBarViewController, DetailViewDelegate {
         lbTitle.text = strategy.title + strategy.title + strategy.title + strategy.title
         lbTitle.font = UIFont.boldSystemFont(ofSize: 18)
         lbTitle.adjustHeight(lineSpacing: 4, numberOfLines: 2)
-        lbTitle.setY(-(lbTitle.getHeight() + 30))
+        
+        let offsetHeight = lbTitle.getHeight() + 26 + 14 + 16*3
+        lbTitle.setY( -offsetHeight + 16)
         
         avatar = UIImageView()
-        avatar.frame = CGRect(x: 16, y: lbTitle.frame.maxY + 16, width: 30, height: 30)
+        avatar.frame = CGRect(x: 16, y: lbTitle.frame.maxY + 16, width: 26, height: 26)
         avatar.backgroundColor = UIColor.gray
+        avatar.setImageWithName("AppIcon")
+        avatar.setOval()
         
+        let lbUsername = UILabel()
+        lbUsername.frame = CGRect(x:avatar.frame.maxX + 10, y: lbTitle.frame.maxY + 16 + 6, width: 100, height: 14)
+        lbUsername.text = "Eric"
+
         let viewTotal = UILabel()
+        viewTotal.frame = CGRect(x:16, y: avatar.frame.maxY + 16, width: 100, height: 14)
+        viewTotal.text = String(strategy.viewTotal)
         
         webView.scrollView.addSubview(lbTitle)
         webView.scrollView.addSubview(avatar)
-        webView.scrollView.contentInset = UIEdgeInsets.init(top: lbTitle.getHeight() + avatar.getHeight(), left: 0, bottom: 0, right: 0)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        print("viewDidLayoutSubviews")
+        webView.scrollView.addSubview(lbUsername)
+        webView.scrollView.addSubview(viewTotal)
+        
+        webView.scrollView.contentInset = UIEdgeInsets.init(top: offsetHeight, left: 0, bottom: 0, right: 0)
     }
     
     func showStrategy(strategy: Strategy) {

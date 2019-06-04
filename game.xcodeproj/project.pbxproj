@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0760AF0422A6A96B00B124FB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */; };
 		079074D622A426CC00EECD2D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D522A426CC00EECD2D /* MainTabViewController.swift */; };
 		079074D922A4271600EECD2D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D822A4271600EECD2D /* MineViewController.swift */; };
 		079074DC22A42CB600EECD2D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074DB22A42CB600EECD2D /* BaseViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		079074D522A426CC00EECD2D /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		079074D822A4271600EECD2D /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		079074DB22A42CB600EECD2D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				07D57CB622A5006200B4E8B8 /* UIView+Extenstion.swift */,
 				07D57CBB22A504D900B4E8B8 /* UIViewController+Extension.swift */,
 				07D57CD622A6656700B4E8B8 /* UILabel+Extension.swift */,
+				0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				07D57CB522A5002000B4E8B8 /* ToolBarViewController.swift in Sources */,
 				07D57CD522A656DB00B4E8B8 /* HtmlUtils.swift in Sources */,
 				07D57CB322A4FFEF00B4E8B8 /* UITableView+Extension.swift in Sources */,
+				0760AF0422A6A96B00B124FB /* UIImageView+Extension.swift in Sources */,
 				07D57CC422A5094A00B4E8B8 /* StrategyCell.swift in Sources */,
 				07D57CCD22A616D100B4E8B8 /* DetailPresenter.swift in Sources */,
 				07D57CAD22A4EAE900B4E8B8 /* StrategyModel.swift in Sources */,

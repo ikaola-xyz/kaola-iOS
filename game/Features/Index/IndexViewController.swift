@@ -53,5 +53,11 @@ class IndexViewController: TableViewController, IndexViewDelegate {
         cell.bindData(strategy: strategy)
         return cell
     }
+    
+    override func onItemClick(_ position: Int) {
+        let detailViewController = DetailViewController()
+        detailViewController.strategy = strategies[position]
+        push(viewController: detailViewController)
+    }
 
 }

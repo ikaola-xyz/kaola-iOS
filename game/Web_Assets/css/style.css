@@ -1,0 +1,24 @@
+html {
+    font-size: 16px;
+    display: block;
+    padding: 0;
+}
+
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
+    line-height: 1.5;
+    -webkit-user-select: none;
+    color: #33373d;
+    fill: currentColor;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    -webkit-touch-callout: none;
+    padding: 16px;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
+

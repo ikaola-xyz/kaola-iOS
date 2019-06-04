@@ -14,9 +14,9 @@ class ToolBarViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-//        if(displayBack()){
-//            setLeftItem("ic_action_back", action: #selector(finish(_:)))
-//        }
+        if(displayBack()){
+            setLeftItem("ic_action_back", action: #selector(finish(_:)))
+        }
     }
     
     override func didReceiveMemoryWarning() {

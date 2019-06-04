@@ -43,7 +43,6 @@ public extension UIViewController{
     }
     
     func push(viewController: UIViewController){
-        print("push viewController")
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     

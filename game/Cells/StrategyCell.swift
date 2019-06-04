@@ -41,7 +41,6 @@ class StrategyCell: UITableViewCell {
     }
     
     func bindData(strategy: Strategy){
-        print("bindData:\(strategy.title)")
         title.text = strategy.title
     }
 }

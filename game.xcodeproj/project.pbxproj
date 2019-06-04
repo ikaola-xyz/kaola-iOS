@@ -29,6 +29,11 @@
 		07D57CBF22A5056E00B4E8B8 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CBE22A5056E00B4E8B8 /* IndexViewController.swift */; };
 		07D57CC122A507A800B4E8B8 /* IndexPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CC022A507A800B4E8B8 /* IndexPresenter.swift */; };
 		07D57CC422A5094A00B4E8B8 /* StrategyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CC322A5094A00B4E8B8 /* StrategyCell.swift */; };
+		07D57CCB22A611B900B4E8B8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CCA22A611B900B4E8B8 /* DetailViewController.swift */; };
+		07D57CCD22A616D100B4E8B8 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CCC22A616D100B4E8B8 /* DetailPresenter.swift */; };
+		07D57CD322A655F200B4E8B8 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 07D57CCF22A64DDE00B4E8B8 /* style.css */; };
+		07D57CD522A656DB00B4E8B8 /* HtmlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CD422A656DB00B4E8B8 /* HtmlUtils.swift */; };
+		07D57CD722A6656700B4E8B8 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57CD622A6656700B4E8B8 /* UILabel+Extension.swift */; };
 		3895A5A46C2833C820EA3001 /* Pods_game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BAA3309071C1EB1632784D /* Pods_game.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +62,11 @@
 		07D57CBE22A5056E00B4E8B8 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		07D57CC022A507A800B4E8B8 /* IndexPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPresenter.swift; sourceTree = "<group>"; };
 		07D57CC322A5094A00B4E8B8 /* StrategyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyCell.swift; sourceTree = "<group>"; };
+		07D57CCA22A611B900B4E8B8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		07D57CCC22A616D100B4E8B8 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		07D57CCF22A64DDE00B4E8B8 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		07D57CD422A656DB00B4E8B8 /* HtmlUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlUtils.swift; sourceTree = "<group>"; };
+		07D57CD622A6656700B4E8B8 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		8DF75DF19626E04F1029B8D0 /* Pods-game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-game.release.xcconfig"; path = "Pods/Target Support Files/Pods-game/Pods-game.release.xcconfig"; sourceTree = "<group>"; };
 		E0FEB0808BD87878AC760980 /* Pods-game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-game.debug.xcconfig"; path = "Pods/Target Support Files/Pods-game/Pods-game.debug.xcconfig"; sourceTree = "<group>"; };
 		E7BAA3309071C1EB1632784D /* Pods_game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +87,7 @@
 		079074D322A4265800EECD2D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				07D57CC922A611A700B4E8B8 /* Detail */,
 				07D57CBD22A5055E00B4E8B8 /* Index */,
 				079074DA22A42C9E00EECD2D /* Base */,
 				079074D722A4270A00EECD2D /* Mine */,
@@ -118,6 +129,7 @@
 				07D57CB222A4FFEF00B4E8B8 /* UITableView+Extension.swift */,
 				07D57CB622A5006200B4E8B8 /* UIView+Extenstion.swift */,
 				07D57CBB22A504D900B4E8B8 /* UIViewController+Extension.swift */,
+				07D57CD622A6656700B4E8B8 /* UILabel+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -144,6 +156,7 @@
 		07D57C9022A10C4D00B4E8B8 /* game */ = {
 			isa = PBXGroup;
 			children = (
+				07D57CCE22A64DAE00B4E8B8 /* Web_Assets */,
 				07D57CC222A508FE00B4E8B8 /* Cells */,
 				07D57CB822A500BB00B4E8B8 /* Res */,
 				07D57CAB22A4EAD600B4E8B8 /* Models */,
@@ -165,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				07D57CA622A4BDA900B4E8B8 /* ApiUtils.swift */,
+				07D57CD422A656DB00B4E8B8 /* HtmlUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -208,6 +222,31 @@
 				07D57CC322A5094A00B4E8B8 /* StrategyCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		07D57CC922A611A700B4E8B8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				07D57CCA22A611B900B4E8B8 /* DetailViewController.swift */,
+				07D57CCC22A616D100B4E8B8 /* DetailPresenter.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		07D57CCE22A64DAE00B4E8B8 /* Web_Assets */ = {
+			isa = PBXGroup;
+			children = (
+				07D57CD122A6503300B4E8B8 /* css */,
+			);
+			path = Web_Assets;
+			sourceTree = "<group>";
+		};
+		07D57CD122A6503300B4E8B8 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				07D57CCF22A64DDE00B4E8B8 /* style.css */,
+			);
+			path = css;
 			sourceTree = "<group>";
 		};
 		7862999B0805FD456DF18033 /* Pods */ = {
@@ -287,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D57CD322A655F200B4E8B8 /* style.css in Resources */,
 				07D57CA422A10F9500B4E8B8 /* .gitignore in Resources */,
 				07D57C9C22A10C5000B4E8B8 /* LaunchScreen.storyboard in Resources */,
 				07D57C9922A10C5000B4E8B8 /* Assets.xcassets in Resources */,
@@ -356,9 +396,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D57CD722A6656700B4E8B8 /* UILabel+Extension.swift in Sources */,
 				07D57CB522A5002000B4E8B8 /* ToolBarViewController.swift in Sources */,
+				07D57CD522A656DB00B4E8B8 /* HtmlUtils.swift in Sources */,
 				07D57CB322A4FFEF00B4E8B8 /* UITableView+Extension.swift in Sources */,
 				07D57CC422A5094A00B4E8B8 /* StrategyCell.swift in Sources */,
+				07D57CCD22A616D100B4E8B8 /* DetailPresenter.swift in Sources */,
 				07D57CAD22A4EAE900B4E8B8 /* StrategyModel.swift in Sources */,
 				07D57CBC22A504D900B4E8B8 /* UIViewController+Extension.swift in Sources */,
 				079074DC22A42CB600EECD2D /* BaseViewController.swift in Sources */,
@@ -366,6 +409,7 @@
 				07D57CB722A5006200B4E8B8 /* UIView+Extenstion.swift in Sources */,
 				07D57CB122A4FC6F00B4E8B8 /* TableViewController.swift in Sources */,
 				07D57C9222A10C4D00B4E8B8 /* AppDelegate.swift in Sources */,
+				07D57CCB22A611B900B4E8B8 /* DetailViewController.swift in Sources */,
 				07D57CC122A507A800B4E8B8 /* IndexPresenter.swift in Sources */,
 				079074DF22A42D1A00EECD2D /* UIColor+Extension.swift in Sources */,
 				07D57CAA22A4BEAD00B4E8B8 /* Strategy.swift in Sources */,

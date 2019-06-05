@@ -19,3 +19,5 @@ let isX: Bool = (ScreenHeight == CGFloat(812) && ScreenWidth == CGFloat(375))
 let NavgationBarHeight: CGFloat = isX ? 88 : 64
 
 let HEIGHT_TOOL_BAR: CGFloat = isX ? 88 : 64
+
+let PADDING_DEFAULT: CGFloat = 16

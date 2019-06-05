@@ -20,6 +20,8 @@ class Strategy: Mappable{
     var title: String!
 
     var content: String!
+    
+    var summary: String!
 
     var cover: String!
 
@@ -38,6 +40,7 @@ class Strategy: Mappable{
         gameId <- map["gameId"]
         title <- map["title"]
         content <- map["content"]
+        summary <- map["summary"]
         cover <- map["cover"]
         origin <- map["origin"]
         from <- map["from"]

@@ -20,7 +20,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = .lightContent
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.navigationBar.barTintColor = UIColor.primary()
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
     }
     
     @objc func finish(_ sender: UIBarButtonItem){

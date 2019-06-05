@@ -27,11 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func setStyleOfNavigationBar(_ navigationController : UINavigationController){
         let navigationBar : UINavigationBar = navigationController.navigationBar
-        navigationBar.isTranslucent = false
+        navigationBar.isTranslucent = true
         navigationBar.barTintColor = UIColor.primary()
         navigationBar.tintColor = UIColor.white //前景色，按钮颜色
         navigationBar.shadowImage = UIImage()
-        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.grayDark()]
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

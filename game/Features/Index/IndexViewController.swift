@@ -30,18 +30,15 @@ class IndexViewController: TableViewController, IndexViewDelegate {
     }
     
     func showStategies(result: Array<Strategy>) {
-        print("IndexViewController showStategies:\(result.count)")
         self.strategies.append(contentsOf: result)
         reloadData()
     }
     
     override func getItemHeight(_ position: Int) -> CGFloat {
-        print("IndexViewController getItemHeight")
         return StrategyCell.HEIGHT
     }
     
     override func getItemCount() -> Int {
-        print("IndexViewController getItemCount:\(self.strategies.count)")
         return self.strategies.count
     }
     

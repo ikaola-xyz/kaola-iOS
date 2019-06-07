@@ -44,6 +44,7 @@ class StrategyCell: UITableViewCell {
         summary.frame = CGRect(x: PADDING_DEFAULT, y: title.frame.maxY + PADDING_DEFAULT, width: ScreenWidth - PADDING_DEFAULT*2, height: 14)
         summary.font = UIFont.systemFont(ofSize: 14)
 
+        self.backgroundColor = UIColor.window()
         self.contentView.addSubview(title)
         self.contentView.addSubview(summary)
     }

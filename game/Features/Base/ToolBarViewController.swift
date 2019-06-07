@@ -15,7 +15,7 @@ class ToolBarViewController: BaseViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         if(displayBack()){
-            setLeftItem("ic_action_back", action: #selector(finish(_:)))
+            setLeftItem("ic_back_black", action: #selector(finish(_:)))
         }
     }
     

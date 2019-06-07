@@ -42,6 +42,7 @@ class TableViewController:ToolBarViewController,UITableViewDataSource,UITableVie
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
         self.tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         self.tableView.separatorColor = UIColor.border()
+        self.tableView.backgroundColor = UIColor.window()
         //防止reload的时候跳动
         self.tableView.estimatedRowHeight = 0
         self.tableView.estimatedSectionFooterHeight = 0

@@ -31,7 +31,7 @@ public extension UIColor{
         return UIColor(rgba: "#666666")
     }
     
-    public class func border() -> UIColor{
+    class func border() -> UIColor{
         return UIColor(rgba: "#aaaaaa").withAlphaComponent(0.30)
     }
     

@@ -21,3 +21,7 @@ let NavgationBarHeight: CGFloat = isX ? 88 : 64
 let HEIGHT_TOOL_BAR: CGFloat = isX ? 88 : 64
 
 let PADDING_DEFAULT: CGFloat = 16
+
+let PADDING_MIDDLE: CGFloat = 12
+
+let PADDING_SMALL: CGFloat = 8

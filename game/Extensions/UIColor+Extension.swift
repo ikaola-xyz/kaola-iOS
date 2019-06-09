@@ -11,6 +11,10 @@ import UIKit
 
 public extension UIColor{
     
+    class func navigationBar() -> UIColor{
+        return UIColor(rgba: "#FFFFFF")
+    }
+    
     class func primary() -> UIColor{
         return UIColor(rgba: "#3bca7b")
     }
@@ -23,6 +27,10 @@ public extension UIColor{
         return UIColor(rgba: "#aaaaaa").withAlphaComponent(0.50)
     }
     
+    class func grayLight() -> UIColor{
+        return UIColor(rgba: "#9E9E9E")
+    }
+    
     class func grayDark() -> UIColor{
         return UIColor(rgba: "#333333")
     }
@@ -33,6 +41,10 @@ public extension UIColor{
     
     class func border() -> UIColor{
         return UIColor(rgba: "#aaaaaa").withAlphaComponent(0.30)
+    }
+    
+    class func inputView() -> UIColor{
+        return UIColor(rgba: "#EDEDED")
     }
     
     convenience init(rgba: String) {

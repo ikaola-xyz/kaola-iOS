@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0716FCB522AC01AB00DA5E15 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCB422AC01AB00DA5E15 /* SearchViewController.swift */; };
+		0716FCB922AC078D00DA5E15 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCB822AC078D00DA5E15 /* UITextField+Extension.swift */; };
+		0716FCBC22ACB67200DA5E15 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCBB22ACB67200DA5E15 /* EditorViewController.swift */; };
+		0716FCBE22ACC27D00DA5E15 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCBD22ACC27D00DA5E15 /* TimeUtils.swift */; };
 		0760AF0422A6A96B00B124FB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */; };
 		0760AF0A22A7FE3500B124FB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760AF0922A7FE3500B124FB /* DetailViewController.swift */; };
 		079074D622A426CC00EECD2D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D522A426CC00EECD2D /* MainTabViewController.swift */; };
@@ -39,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0716FCB422AC01AB00DA5E15 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		0716FCB822AC078D00DA5E15 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		0716FCBB22ACB67200DA5E15 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		0716FCBD22ACC27D00DA5E15 /* TimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
 		0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		0760AF0922A7FE3500B124FB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		079074D522A426CC00EECD2D /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
@@ -86,9 +94,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0716FCB322AC017E00DA5E15 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0716FCB422AC01AB00DA5E15 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0716FCBA22ACB64500DA5E15 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				0716FCBB22ACB67200DA5E15 /* EditorViewController.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
 		079074D322A4265800EECD2D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0716FCBA22ACB64500DA5E15 /* Editor */,
+				0716FCB322AC017E00DA5E15 /* Search */,
 				07D57CC922A611A700B4E8B8 /* Detail */,
 				07D57CBD22A5055E00B4E8B8 /* Index */,
 				079074DA22A42C9E00EECD2D /* Base */,
@@ -133,6 +159,7 @@
 				07D57CBB22A504D900B4E8B8 /* UIViewController+Extension.swift */,
 				07D57CD622A6656700B4E8B8 /* UILabel+Extension.swift */,
 				0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */,
+				0716FCB822AC078D00DA5E15 /* UITextField+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -182,6 +209,7 @@
 			children = (
 				07D57CA622A4BDA900B4E8B8 /* ApiUtils.swift */,
 				07D57CD422A656DB00B4E8B8 /* HtmlUtils.swift */,
+				0716FCBD22ACC27D00DA5E15 /* TimeUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -406,9 +434,11 @@
 				07D57CB322A4FFEF00B4E8B8 /* UITableView+Extension.swift in Sources */,
 				0760AF0422A6A96B00B124FB /* UIImageView+Extension.swift in Sources */,
 				07D57CC422A5094A00B4E8B8 /* StrategyCell.swift in Sources */,
+				0716FCBC22ACB67200DA5E15 /* EditorViewController.swift in Sources */,
 				07D57CCD22A616D100B4E8B8 /* DetailPresenter.swift in Sources */,
 				07D57CAD22A4EAE900B4E8B8 /* StrategyModel.swift in Sources */,
 				07D57CBC22A504D900B4E8B8 /* UIViewController+Extension.swift in Sources */,
+				0716FCB922AC078D00DA5E15 /* UITextField+Extension.swift in Sources */,
 				079074DC22A42CB600EECD2D /* BaseViewController.swift in Sources */,
 				07D57C9422A10C4D00B4E8B8 /* ViewController.swift in Sources */,
 				07D57CB722A5006200B4E8B8 /* UIView+Extenstion.swift in Sources */,
@@ -417,6 +447,8 @@
 				07D57CC122A507A800B4E8B8 /* IndexPresenter.swift in Sources */,
 				079074DF22A42D1A00EECD2D /* UIColor+Extension.swift in Sources */,
 				07D57CAA22A4BEAD00B4E8B8 /* Strategy.swift in Sources */,
+				0716FCB522AC01AB00DA5E15 /* SearchViewController.swift in Sources */,
+				0716FCBE22ACC27D00DA5E15 /* TimeUtils.swift in Sources */,
 				07D57CBF22A5056E00B4E8B8 /* IndexViewController.swift in Sources */,
 				079074D622A426CC00EECD2D /* MainTabViewController.swift in Sources */,
 				07D57CBA22A500C500B4E8B8 /* Demins.swift in Sources */,

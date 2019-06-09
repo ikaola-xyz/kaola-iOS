@@ -27,6 +27,22 @@ class IndexViewController: TableViewController, IndexViewDelegate {
         
         indexPresenter = IndexPresenter(view: self)
         indexPresenter.getStrategies()
+        
+        let size: CGFloat = 50
+        let btnCreate = UILabel()
+        btnCreate.frame = CGRect(x: ScreenWidth - size - 16,
+                                 y: ScreenHeight - size - NavgationBarHeight - 16,
+                                 width: size,
+                                 height: size)
+        btnCreate.backgroundColor = UIColor.green
+        btnCreate.text = "+"
+        btnCreate.font = UIFont.boldSystemFont(ofSize: 20)
+        btnCreate.textColor = UIColor.white
+        btnCreate.layer.cornerRadius = size/2
+        btnCreate.layer.masksToBounds = true
+        btnCreate.textAlignment = .center
+        
+        self.view.addSubview(btnCreate)
     }
     
     func showStategies(result: Array<Strategy>) {

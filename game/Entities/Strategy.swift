@@ -31,6 +31,8 @@ class Strategy: Mappable{
     
     var viewTotal: Int!
     
+    var created: Double!
+    
     required init?(map: Map) {
     }
     
@@ -45,5 +47,6 @@ class Strategy: Mappable{
         origin <- map["origin"]
         from <- map["from"]
         viewTotal <- map["viewTotal"]
+        created <- map["created"]
     }
 }

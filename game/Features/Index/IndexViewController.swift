@@ -41,8 +41,17 @@ class IndexViewController: TableViewController, IndexViewDelegate {
         btnCreate.layer.cornerRadius = size/2
         btnCreate.layer.masksToBounds = true
         btnCreate.textAlignment = .center
+        btnCreate.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(IndexViewController.create))
+        btnCreate.addGestureRecognizer(tap)
         
         self.view.addSubview(btnCreate)
+    }
+    
+    @objc func create(){
+        print("create")
+        let editorViewController = EditorViewController()
+        push(viewController: editorViewController)
     }
     
     func showStategies(result: Array<Strategy>) {

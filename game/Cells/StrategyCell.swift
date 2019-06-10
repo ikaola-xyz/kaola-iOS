@@ -82,7 +82,7 @@ class StrategyCell: UITableViewCell {
         avatar.setY(summary.frame.maxY + PADDING_MIDDLE)
         
         username.setY(avatar.frame.minY + 4)
-        username.text = "考拉攻略"
+        username.text = strategy.user.nickname
         
         created.setY(avatar.frame.minY + 4)
         created.text = TimeUtils.toTimeString(timestamp: strategy.created)

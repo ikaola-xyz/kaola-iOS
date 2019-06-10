@@ -11,6 +11,7 @@
 		0716FCB922AC078D00DA5E15 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCB822AC078D00DA5E15 /* UITextField+Extension.swift */; };
 		0716FCBC22ACB67200DA5E15 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCBB22ACB67200DA5E15 /* EditorViewController.swift */; };
 		0716FCBE22ACC27D00DA5E15 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCBD22ACC27D00DA5E15 /* TimeUtils.swift */; };
+		071E5D6322AE9E7C007FA6EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E5D6222AE9E7C007FA6EC /* User.swift */; };
 		0760AF0422A6A96B00B124FB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */; };
 		0760AF0A22A7FE3500B124FB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760AF0922A7FE3500B124FB /* DetailViewController.swift */; };
 		079074D622A426CC00EECD2D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D522A426CC00EECD2D /* MainTabViewController.swift */; };
@@ -47,6 +48,7 @@
 		0716FCB822AC078D00DA5E15 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		0716FCBB22ACB67200DA5E15 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		0716FCBD22ACC27D00DA5E15 /* TimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
+		071E5D6222AE9E7C007FA6EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		0760AF0922A7FE3500B124FB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		079074D522A426CC00EECD2D /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				07D57CA922A4BEAD00B4E8B8 /* Strategy.swift */,
+				071E5D6222AE9E7C007FA6EC /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				07D57CC122A507A800B4E8B8 /* IndexPresenter.swift in Sources */,
 				079074DF22A42D1A00EECD2D /* UIColor+Extension.swift in Sources */,
 				07D57CAA22A4BEAD00B4E8B8 /* Strategy.swift in Sources */,
+				071E5D6322AE9E7C007FA6EC /* User.swift in Sources */,
 				0716FCB522AC01AB00DA5E15 /* SearchViewController.swift in Sources */,
 				0716FCBE22ACC27D00DA5E15 /* TimeUtils.swift in Sources */,
 				07D57CBF22A5056E00B4E8B8 /* IndexViewController.swift in Sources */,

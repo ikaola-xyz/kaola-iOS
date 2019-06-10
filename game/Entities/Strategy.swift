@@ -14,7 +14,9 @@ class Strategy: Mappable{
     var id: String!
 
     var userId: String!
-
+    
+    var user: User!
+    
     var gameId: String!
 
     var title: String!
@@ -39,6 +41,7 @@ class Strategy: Mappable{
     func mapping(map: Map) {
         id <- map["id"]
         userId <- map["userId"]
+        user <- map["user"]
         gameId <- map["gameId"]
         title <- map["title"]
         content <- map["content"]

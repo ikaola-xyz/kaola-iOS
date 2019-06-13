@@ -18,6 +18,7 @@ PODS:
   - UMCCommon (1.5.3)
   - UMCSecurityPlugins (1.0.6)
   - WechatOpenSDK (1.8.3)
+  - WordPress-Aztec-iOS (1.4.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - UMCCommon
   - UMCSecurityPlugins
   - WechatOpenSDK
+  - WordPress-Aztec-iOS (~> 1.4.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -48,6 +50,7 @@ SPEC REPOS:
     - UMCCommon
     - UMCSecurityPlugins
     - WechatOpenSDK
+    - WordPress-Aztec-iOS
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
@@ -63,7 +66,8 @@ SPEC CHECKSUMS:
   UMCCommon: 016af43c0f769feb1ae1861d65aaf2b23b89c9c7
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   WechatOpenSDK: 3117412f8aafde4758cac1e8d20b93c67cafcfef
+  WordPress-Aztec-iOS: d9e816350ab1e200681d433287fbb079675e9159
 
-PODFILE CHECKSUM: 630df6f4f0f7d7e3c85e3b8d84c3890fdad26c21
+PODFILE CHECKSUM: 623fe01e633e1b53780ee4a3e4b8ee2d23d430b5
 
 COCOAPODS: 1.5.3

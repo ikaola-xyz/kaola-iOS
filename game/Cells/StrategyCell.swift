@@ -62,10 +62,9 @@ class StrategyCell: UITableViewCell {
         username.textColor = UIColor.grayMiddle()
         
         created = UILabel()
-        created.frame = CGRect(x: ScreenWidth - 100, y: avatar.frame.minY, width: 100, height: 12)
+        created.frame = CGRect(x: ScreenWidth - 110 - PADDING_DEFAULT, y: avatar.frame.minY, width: 110, height: 12)
         created.font = UIFont.systemFont(ofSize: 12)
         created.textColor = UIColor.grayMiddle()
-        created.backgroundColor = UIColor.green
         created.textAlignment = .right
         
         self.backgroundColor = UIColor.window()
@@ -73,6 +72,7 @@ class StrategyCell: UITableViewCell {
         self.contentView.addSubview(summary)
         self.contentView.addSubview(avatar)
         self.contentView.addSubview(username)
+        self.contentView.addSubview(created)
     }
     
     func bindData(strategy: Strategy){

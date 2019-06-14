@@ -18,6 +18,7 @@
 		079074D922A4271600EECD2D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D822A4271600EECD2D /* MineViewController.swift */; };
 		079074DC22A42CB600EECD2D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074DB22A42CB600EECD2D /* BaseViewController.swift */; };
 		079074DF22A42D1A00EECD2D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074DE22A42D1A00EECD2D /* UIColor+Extension.swift */; };
+		07B8A63222B37EC000726016 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8A63122B37EC000726016 /* KeyboardManager.swift */; };
 		07D57C9222A10C4D00B4E8B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57C9122A10C4D00B4E8B8 /* AppDelegate.swift */; };
 		07D57C9422A10C4D00B4E8B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D57C9322A10C4D00B4E8B8 /* ViewController.swift */; };
 		07D57C9722A10C4D00B4E8B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D57C9522A10C4D00B4E8B8 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		079074D822A4271600EECD2D /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		079074DB22A42CB600EECD2D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		079074DE22A42D1A00EECD2D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		07B8A63122B37EC000726016 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		07D57C8E22A10C4D00B4E8B8 /* game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D57C9122A10C4D00B4E8B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07D57C9322A10C4D00B4E8B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				0716FCBB22ACB67200DA5E15 /* EditorViewController.swift */,
+				07B8A63122B37EC000726016 /* KeyboardManager.swift */,
 			);
 			path = Editor;
 			sourceTree = "<group>";
@@ -402,10 +405,10 @@
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
+				"${BUILT_PRODUCTS_DIR}/RichEditorView/RichEditorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/WordPress-Aztec-iOS/Aztec.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -415,10 +418,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RichEditorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aztec.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -456,6 +459,7 @@
 				0716FCB522AC01AB00DA5E15 /* SearchViewController.swift in Sources */,
 				0716FCBE22ACC27D00DA5E15 /* TimeUtils.swift in Sources */,
 				07D57CBF22A5056E00B4E8B8 /* IndexViewController.swift in Sources */,
+				07B8A63222B37EC000726016 /* KeyboardManager.swift in Sources */,
 				079074D622A426CC00EECD2D /* MainTabViewController.swift in Sources */,
 				07D57CBA22A500C500B4E8B8 /* Demins.swift in Sources */,
 				079074D922A4271600EECD2D /* MineViewController.swift in Sources */,

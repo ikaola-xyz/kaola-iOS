@@ -10,6 +10,7 @@ PODS:
   - Motion/Core (1.4.3)
   - ObjectMapper (3.4.1)
   - Pageboy (2.6.1)
+  - RichEditorView (5.0.0)
   - SideMenu (5.0.3)
   - SnapKit (4.0.1)
   - Toast-Swift (4.0.1)
@@ -18,7 +19,6 @@ PODS:
   - UMCCommon (1.5.3)
   - UMCSecurityPlugins (1.0.6)
   - WechatOpenSDK (1.8.3)
-  - WordPress-Aztec-iOS (1.4.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -26,6 +26,7 @@ DEPENDENCIES:
   - Material (~> 2.0)
   - ObjectMapper (~> 3.4)
   - Pageboy (~> 2.6)
+  - RichEditorView
   - SideMenu
   - SnapKit (~> 4.0.0)
   - Toast-Swift (~> 4.0.0)
@@ -33,7 +34,6 @@ DEPENDENCIES:
   - UMCCommon
   - UMCSecurityPlugins
   - WechatOpenSDK
-  - WordPress-Aztec-iOS (~> 1.4.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -43,6 +43,7 @@ SPEC REPOS:
     - Motion
     - ObjectMapper
     - Pageboy
+    - RichEditorView
     - SideMenu
     - SnapKit
     - Toast-Swift
@@ -50,7 +51,6 @@ SPEC REPOS:
     - UMCCommon
     - UMCSecurityPlugins
     - WechatOpenSDK
-    - WordPress-Aztec-iOS
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
@@ -59,6 +59,7 @@ SPEC CHECKSUMS:
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
   ObjectMapper: 5311bd50ca732930959e7ca1a2de43ab823a5ced
   Pageboy: c2a25d1c280e9b622014b692626f1ff9298e0ad2
+  RichEditorView: 1bbb07b87ca2d479ac29a6877014b38b8df233ef
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
@@ -66,8 +67,7 @@ SPEC CHECKSUMS:
   UMCCommon: 016af43c0f769feb1ae1861d65aaf2b23b89c9c7
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   WechatOpenSDK: 3117412f8aafde4758cac1e8d20b93c67cafcfef
-  WordPress-Aztec-iOS: d9e816350ab1e200681d433287fbb079675e9159
 
-PODFILE CHECKSUM: 623fe01e633e1b53780ee4a3e4b8ee2d23d430b5
+PODFILE CHECKSUM: ec95058b73f464de547200501b75d2865aab3eb2
 
 COCOAPODS: 1.5.3

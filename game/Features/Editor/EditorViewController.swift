@@ -11,21 +11,14 @@ import RichEditorView
 
 class EditorViewController: ToolBarViewController {
     
+    var editor: RichEditorView!
+    
     var editorBar: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
-    }
-    
-    func initViews(){
-        let editor = RichEditorView(frame: CGRect(x: PADDING_DEFAULT, y: PADDING_DEFAULT, width: ScreenWidth - PADDING_DEFAULT*2, height: ScreenHeight))
-        self.view.addSubview(editor)
-        
-        editorBar = UIView()
-        editorBar.frame = CGRect(x: 0, y: ScreenHeight - 56, width: ScreenWidth, height: 56)
-        editorBar.backgroundColor = UIColor.gray
-        addSubview(editorBar)
+        initEditorBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,13 +31,39 @@ class EditorViewController: ToolBarViewController {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
+    
+    func initViews(){
+        editor = RichEditorView(frame: CGRect(x: PADDING_DEFAULT, y: PADDING_DEFAULT, width: ScreenWidth - PADDING_DEFAULT*2, height: ScreenHeight))
+        editor.placeholder = "写点什么呢..."
+        editor.backgroundColor = UIColor.gray
+        addSubview(editor)
+    }
+    
+    func initEditorBar(){
+        editorBar = UIView()
+        editorBar.frame = CGRect(x: 0, y: ScreenHeight - 56, width: ScreenWidth, height: 56)
+        editorBar.backgroundColor = UIColor.gray
+        editorBar.isHidden = true
+        addSubview(editorBar)
+        
+        let btnClose = UIButton()
+        btnClose.frame = CGRect(x: 0, y: 0, width: 56, height: 56)
+        btnClose.backgroundColor = UIColor.red
+        btnClose.addTarget(self, action: #selector(EditorViewController.closeEditorBar), for: .touchUpInside)
+        editorBar.addSubview(btnClose)
+    }
 
+    @objc func closeEditorBar(){
+        print("closeEditorBar")
+        editor.resignFirstResponder()
+    }
+    
     @objc fileprivate func frameChange(_ notification:Notification){
         let info = notification.userInfo
         let keyboardRect = (info?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let options = UIView.AnimationOptions.curveEaseIn
         if(notification.name == UIResponder.keyboardWillShowNotification){
-            print("frameChange show")
+            self.editorBar.isHidden = false
             UIView.animate(withDuration: 0.25, delay: 0, options: options, animations: {
                 if let view = self.view {
                     self.editorBar.frame.origin.y = view.frame.height - (keyboardRect.height + self.editorBar.frame.height)
@@ -52,7 +71,7 @@ class EditorViewController: ToolBarViewController {
             }, completion: nil)
         }
         else if(notification.name == UIResponder.keyboardWillHideNotification){
-            print("frameChange hide")
+            self.editorBar.isHidden = true
             UIView.animate(withDuration:  0.25, delay: 0, options: options, animations: {
                 if let view = self.view {
                     self.editorBar.frame.origin.y = view.frame.height

@@ -15,6 +15,8 @@ class EditorViewController: ToolBarViewController {
     
     var editorBar: UIView!
     
+    var popOver:UIPopoverController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
@@ -49,13 +51,28 @@ class EditorViewController: ToolBarViewController {
         let btnClose = UIButton()
         btnClose.frame = CGRect(x: 0, y: 0, width: 56, height: 56)
         btnClose.backgroundColor = UIColor.red
+        btnClose.setTitle("-", for: .normal)
         btnClose.addTarget(self, action: #selector(EditorViewController.closeEditorBar), for: .touchUpInside)
         editorBar.addSubview(btnClose)
+        
+        let btnFont = UIButton()
+        btnFont.frame = CGRect(x: 56, y: 0, width: 56, height: 56)
+        btnFont.backgroundColor = UIColor.gray
+        btnFont.addTarget(self, action: #selector(EditorViewController.editFont), for: .touchUpInside)
+        btnFont.setTitle("A", for: .normal)
+        editorBar.addSubview(btnFont)
     }
 
     @objc func closeEditorBar(){
         print("closeEditorBar")
-        editor.resignFirstResponder()
+        editor.endEditing(true)
+    }
+    
+    @objc func editFont(){
+        print("editFont")
+//        editor.bold()
+//        editor.header(1)
+        
     }
     
     @objc fileprivate func frameChange(_ notification:Notification){

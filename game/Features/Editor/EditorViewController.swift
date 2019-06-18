@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RichEditorView
 
 class EditorViewController: ToolBarViewController {
     
@@ -72,7 +71,6 @@ class EditorViewController: ToolBarViewController {
         print("editFont")
 //        editor.bold()
 //        editor.header(1)
-        
     }
     
     @objc fileprivate func frameChange(_ notification:Notification){

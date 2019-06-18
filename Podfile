@@ -16,5 +16,5 @@ target 'game' do
     pod 'UMCSecurityPlugins'
     pod 'Toast-Swift', '~> 4.0.0'
 #    pod 'WordPress-Aztec-iOS', '~> 1.4.2'
-    pod "RichEditorView"
+#    pod "RichEditorView"
 end

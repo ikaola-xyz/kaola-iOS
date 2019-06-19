@@ -22,9 +22,9 @@ class HtmlUtils{
         
         let headEnd = "</head>"
         
-        let bodyBegin = "<body>"
+        let bodyBegin = "<body><div class='container'>"
 
-        let bodyEnd = "</body>"
+        let bodyEnd = "</div></body>"
 
         let end = "</html>"
 

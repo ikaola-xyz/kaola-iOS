@@ -7,8 +7,11 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 import RichEditorView
 import Popover
+=======
+>>>>>>> aef8c4a6194c15d0faf87a336133c2b7882b6232
 
 class EditorViewController: ToolBarViewController {
     
@@ -73,8 +76,15 @@ class EditorViewController: ToolBarViewController {
         editor.endEditing(true)
     }
     
+<<<<<<< HEAD
     @objc func showFontMenu(){
         fontMenu.show()
+=======
+    @objc func editFont(){
+        print("editFont")
+//        editor.bold()
+//        editor.header(1)
+>>>>>>> aef8c4a6194c15d0faf87a336133c2b7882b6232
     }
     
     @objc fileprivate func frameChange(_ notification:Notification){

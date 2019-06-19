@@ -182,6 +182,7 @@ SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+<<<<<<< HEAD
 			<string>Copyright (c) 2017 corin8823 &lt;yusuke_takahashi@cyberagent.co.jp&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -233,6 +234,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 		</dict>
 		<dict>
 			<key>FooterText</key>
+=======
+>>>>>>> aef8c4a6194c15d0faf87a336133c2b7882b6232
 			<string>Copyright (c) 2015 Jonathan Kent &lt;contact@jonkent.me&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

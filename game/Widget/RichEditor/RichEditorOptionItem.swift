@@ -21,7 +21,6 @@ public protocol RichEditorOption {
     /// The action to be evoked when the action is tapped
     /// - parameter editor: The RichEditorToolbar that the RichEditorOption was being displayed in when tapped.
     ///                     Contains a reference to the `editor` RichEditorView to perform actions on.
-    func action(_ editor: RichEditorToolbar)
 }
 
 /// RichEditorOptionItem is a concrete implementation of RichEditorOption.
@@ -35,18 +34,10 @@ public struct RichEditorOptionItem: RichEditorOption {
     public var title: String
 
     /// The action to be performed when tapped
-    public var handler: ((RichEditorToolbar) -> Void)
 
-    public init(image: UIImage?, title: String, action: @escaping ((RichEditorToolbar) -> Void)) {
+    public init(image: UIImage?, title: String) {
         self.image = image
         self.title = title
-        self.handler = action
-    }
-    
-    // MARK: RichEditorOption
-    
-    public func action(_ toolbar: RichEditorToolbar) {
-        handler(toolbar)
     }
 }
 
@@ -113,7 +104,7 @@ public enum RichEditorDefaultOption: RichEditorOption {
         case .link: name = "insert_link"
         }
         
-        let bundle = Bundle(for: RichEditorToolbar.self)
+        let bundle = Bundle()
         return UIImage(named: name, in: bundle, compatibleWith: nil)
     }
     
@@ -140,32 +131,6 @@ public enum RichEditorDefaultOption: RichEditorOption {
         case .alignRight: return NSLocalizedString("Right", comment: "")
         case .image: return NSLocalizedString("Image", comment: "")
         case .link: return NSLocalizedString("Link", comment: "")
-        }
-    }
-    
-    public func action(_ toolbar: RichEditorToolbar) {
-        switch self {
-        case .clear: toolbar.editor?.removeFormat()
-        case .undo: toolbar.editor?.undo()
-        case .redo: toolbar.editor?.redo()
-        case .bold: toolbar.editor?.bold()
-        case .italic: toolbar.editor?.italic()
-        case .subscript: toolbar.editor?.subscriptText()
-        case .superscript: toolbar.editor?.superscript()
-        case .strike: toolbar.editor?.strikethrough()
-        case .underline: toolbar.editor?.underline()
-        case .textColor: toolbar.delegate?.richEditorToolbarChangeTextColor?(toolbar)
-        case .textBackgroundColor: toolbar.delegate?.richEditorToolbarChangeBackgroundColor?(toolbar)
-        case .header(let h): toolbar.editor?.header(h)
-        case .indent: toolbar.editor?.indent()
-        case .outdent: toolbar.editor?.outdent()
-        case .orderedList: toolbar.editor?.orderedList()
-        case .unorderedList: toolbar.editor?.unorderedList()
-        case .alignLeft: toolbar.editor?.alignLeft()
-        case .alignCenter: toolbar.editor?.alignCenter()
-        case .alignRight: toolbar.editor?.alignRight()
-        case .image: toolbar.delegate?.richEditorToolbarInsertImage?(toolbar)
-        case .link: toolbar.delegate?.richEditorToolbarInsertLink?(toolbar)
         }
     }
 }

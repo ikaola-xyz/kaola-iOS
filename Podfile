@@ -17,4 +17,5 @@ target 'game' do
     pod 'Toast-Swift', '~> 4.0.0'
 #    pod 'WordPress-Aztec-iOS', '~> 1.4.2'
     pod "RichEditorView"
+    pod "Popover"
 end

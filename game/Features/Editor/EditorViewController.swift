@@ -8,6 +8,7 @@
 
 import UIKit
 import RichEditorView
+import Popover
 
 class EditorViewController: ToolBarViewController {
     
@@ -15,7 +16,9 @@ class EditorViewController: ToolBarViewController {
     
     var editorBar: UIView!
     
-    var popOver:UIPopoverController!
+    var btnFont: UIButton!
+    
+    var fontMenu: EditorFontMenu!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,24 +58,23 @@ class EditorViewController: ToolBarViewController {
         btnClose.addTarget(self, action: #selector(EditorViewController.closeEditorBar), for: .touchUpInside)
         editorBar.addSubview(btnClose)
         
-        let btnFont = UIButton()
+        btnFont = UIButton()
         btnFont.frame = CGRect(x: 56, y: 0, width: 56, height: 56)
         btnFont.backgroundColor = UIColor.gray
-        btnFont.addTarget(self, action: #selector(EditorViewController.editFont), for: .touchUpInside)
+        btnFont.addTarget(self, action: #selector(EditorViewController.showFontMenu), for: .touchUpInside)
         btnFont.setTitle("A", for: .normal)
         editorBar.addSubview(btnFont)
+        
+        fontMenu = EditorFontMenu()
+        fontMenu.attach(editorView: editor, fromView: btnFont)
     }
 
     @objc func closeEditorBar(){
-        print("closeEditorBar")
         editor.endEditing(true)
     }
     
-    @objc func editFont(){
-        print("editFont")
-//        editor.bold()
-//        editor.header(1)
-        
+    @objc func showFontMenu(){
+        fontMenu.show()
     }
     
     @objc fileprivate func frameChange(_ notification:Notification){

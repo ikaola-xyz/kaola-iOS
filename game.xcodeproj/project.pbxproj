@@ -12,23 +12,22 @@
 		0716FCBC22ACB67200DA5E15 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCBB22ACB67200DA5E15 /* EditorViewController.swift */; };
 		0716FCBE22ACC27D00DA5E15 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCBD22ACC27D00DA5E15 /* TimeUtils.swift */; };
 		071E5D6322AE9E7C007FA6EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E5D6222AE9E7C007FA6EC /* User.swift */; };
-<<<<<<< HEAD
 		074FBB8F22B8BFF200B477F0 /* EditorFontMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074FBB8E22B8BFF200B477F0 /* EditorFontMenu.swift */; };
-=======
 		07593C4A22B91CD6003B9361 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07593C4722B91CD6003B9361 /* String+Extensions.swift */; };
 		07593C4B22B91CD6003B9361 /* CJWWebView+HackishAccessoryHiding.m in Sources */ = {isa = PBXBuildFile; fileRef = 07593C4522B91CD5003B9361 /* CJWWebView+HackishAccessoryHiding.m */; };
 		07593C4C22B91CD6003B9361 /* RichEditorOptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07593C4922B91CD6003B9361 /* RichEditorOptionItem.swift */; };
 		07593C4D22B91CD6003B9361 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07593C4622B91CD5003B9361 /* UIColor+Extensions.swift */; };
 		07593C4E22B91CD6003B9361 /* UIView+Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07593C4322B91CD5003B9361 /* UIView+Responder.swift */; };
-		07593C5122B92079003B9361 /* RichEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07593C5022B92079003B9361 /* RichEditorView.swift */; };
 		07593C5D22B922CF003B9361 /* assert.js in Resources */ = {isa = PBXBuildFile; fileRef = 07593C5A22B922CE003B9361 /* assert.js */; };
-		07593C5E22B922CF003B9361 /* rich_editor_tests.js in Resources */ = {isa = PBXBuildFile; fileRef = 07593C5922B922CE003B9361 /* rich_editor_tests.js */; };
 		07593C5F22B922EE003B9361 /* normalize.css in Resources */ = {isa = PBXBuildFile; fileRef = 07593C5C22B922CF003B9361 /* normalize.css */; };
-		07593C6022B922EE003B9361 /* rich_editor_tests.html in Resources */ = {isa = PBXBuildFile; fileRef = 07593C5722B922CE003B9361 /* rich_editor_tests.html */; };
 		07593C6122B922EE003B9361 /* rich_editor.html in Resources */ = {isa = PBXBuildFile; fileRef = 07593C5B22B922CF003B9361 /* rich_editor.html */; };
->>>>>>> aef8c4a6194c15d0faf87a336133c2b7882b6232
 		0760AF0422A6A96B00B124FB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */; };
 		0760AF0A22A7FE3500B124FB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760AF0922A7FE3500B124FB /* DetailViewController.swift */; };
+		0770C48422B9DD1300FD6DC6 /* CJWWebView+HackishAccessoryHiding.h in Sources */ = {isa = PBXBuildFile; fileRef = 07593C4822B91CD6003B9361 /* CJWWebView+HackishAccessoryHiding.h */; };
+		0770C48522B9DD1300FD6DC6 /* RichEditorView-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 07593C3E22B91A6D003B9361 /* RichEditorView-Bridging-Header.h */; };
+		0770C48622B9DD1300FD6DC6 /* RichEditorView.h in Sources */ = {isa = PBXBuildFile; fileRef = 07593C3D22B91A6D003B9361 /* RichEditorView.h */; };
+		0770C48922B9DDA600FD6DC6 /* RichEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0770C48822B9DDA500FD6DC6 /* RichEditorView.swift */; };
+		0770C48B22B9ECA000FD6DC6 /* rich_editor.js in Resources */ = {isa = PBXBuildFile; fileRef = 0770C48A22B9ECA000FD6DC6 /* rich_editor.js */; };
 		079074D622A426CC00EECD2D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D522A426CC00EECD2D /* MainTabViewController.swift */; };
 		079074D922A4271600EECD2D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D822A4271600EECD2D /* MineViewController.swift */; };
 		079074DC22A42CB600EECD2D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074DB22A42CB600EECD2D /* BaseViewController.swift */; };
@@ -65,9 +64,7 @@
 		0716FCBB22ACB67200DA5E15 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		0716FCBD22ACC27D00DA5E15 /* TimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
 		071E5D6222AE9E7C007FA6EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		074FBB8E22B8BFF200B477F0 /* EditorFontMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorFontMenu.swift; sourceTree = "<group>"; };
-=======
 		07593C3D22B91A6D003B9361 /* RichEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RichEditorView.h; sourceTree = "<group>"; };
 		07593C3E22B91A6D003B9361 /* RichEditorView-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RichEditorView-Bridging-Header.h"; sourceTree = "<group>"; };
 		07593C4322B91CD5003B9361 /* UIView+Responder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Responder.swift"; sourceTree = "<group>"; };
@@ -76,15 +73,13 @@
 		07593C4722B91CD6003B9361 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		07593C4822B91CD6003B9361 /* CJWWebView+HackishAccessoryHiding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CJWWebView+HackishAccessoryHiding.h"; sourceTree = "<group>"; };
 		07593C4922B91CD6003B9361 /* RichEditorOptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichEditorOptionItem.swift; sourceTree = "<group>"; };
-		07593C5022B92079003B9361 /* RichEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RichEditorView.swift; path = "../../../../../../iOS/RichEditorView-master/RichEditorView/Classes/RichEditorView.swift"; sourceTree = "<group>"; };
-		07593C5722B922CE003B9361 /* rich_editor_tests.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rich_editor_tests.html; sourceTree = "<group>"; };
-		07593C5922B922CE003B9361 /* rich_editor_tests.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = rich_editor_tests.js; sourceTree = "<group>"; };
 		07593C5A22B922CE003B9361 /* assert.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = assert.js; sourceTree = "<group>"; };
 		07593C5B22B922CF003B9361 /* rich_editor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rich_editor.html; sourceTree = "<group>"; };
 		07593C5C22B922CF003B9361 /* normalize.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = normalize.css; sourceTree = "<group>"; };
->>>>>>> aef8c4a6194c15d0faf87a336133c2b7882b6232
 		0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		0760AF0922A7FE3500B124FB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0770C48822B9DDA500FD6DC6 /* RichEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RichEditorView.swift; sourceTree = "<group>"; };
+		0770C48A22B9ECA000FD6DC6 /* rich_editor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rich_editor.js; sourceTree = "<group>"; };
 		079074D522A426CC00EECD2D /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		079074D822A4271600EECD2D /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		079074DB22A42CB600EECD2D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -160,7 +155,7 @@
 		07593C3C22B91977003B9361 /* RichEditor */ = {
 			isa = PBXGroup;
 			children = (
-				07593C5022B92079003B9361 /* RichEditorView.swift */,
+				0770C48822B9DDA500FD6DC6 /* RichEditorView.swift */,
 				07593C4822B91CD6003B9361 /* CJWWebView+HackishAccessoryHiding.h */,
 				07593C4522B91CD5003B9361 /* CJWWebView+HackishAccessoryHiding.m */,
 				07593C4922B91CD6003B9361 /* RichEditorOptionItem.swift */,
@@ -340,10 +335,9 @@
 		07D57CD122A6503300B4E8B8 /* css */ = {
 			isa = PBXGroup;
 			children = (
+				0770C48A22B9ECA000FD6DC6 /* rich_editor.js */,
 				07593C5A22B922CE003B9361 /* assert.js */,
 				07593C5C22B922CF003B9361 /* normalize.css */,
-				07593C5722B922CE003B9361 /* rich_editor_tests.html */,
-				07593C5922B922CE003B9361 /* rich_editor_tests.js */,
 				07593C5B22B922CF003B9361 /* rich_editor.html */,
 				07D57CCF22A64DDE00B4E8B8 /* style.css */,
 			);
@@ -428,13 +422,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				07593C5F22B922EE003B9361 /* normalize.css in Resources */,
-				07593C6022B922EE003B9361 /* rich_editor_tests.html in Resources */,
+				0770C48B22B9ECA000FD6DC6 /* rich_editor.js in Resources */,
 				07593C6122B922EE003B9361 /* rich_editor.html in Resources */,
 				07593C5D22B922CF003B9361 /* assert.js in Resources */,
 				07D57CD322A655F200B4E8B8 /* style.css in Resources */,
 				07D57CA422A10F9500B4E8B8 /* .gitignore in Resources */,
 				07D57C9C22A10C5000B4E8B8 /* LaunchScreen.storyboard in Resources */,
-				07593C5E22B922CF003B9361 /* rich_editor_tests.js in Resources */,
 				07D57C9922A10C5000B4E8B8 /* Assets.xcassets in Resources */,
 				07D57C9722A10C4D00B4E8B8 /* Main.storyboard in Resources */,
 			);
@@ -474,11 +467,7 @@
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
-<<<<<<< HEAD
 				"${BUILT_PRODUCTS_DIR}/Popover/Popover.framework",
-				"${BUILT_PRODUCTS_DIR}/RichEditorView/RichEditorView.framework",
-=======
->>>>>>> aef8c4a6194c15d0faf87a336133c2b7882b6232
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -491,11 +480,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
-<<<<<<< HEAD
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Popover.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RichEditorView.framework",
-=======
->>>>>>> aef8c4a6194c15d0faf87a336133c2b7882b6232
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -512,10 +497,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0770C48422B9DD1300FD6DC6 /* CJWWebView+HackishAccessoryHiding.h in Sources */,
+				0770C48522B9DD1300FD6DC6 /* RichEditorView-Bridging-Header.h in Sources */,
+				0770C48622B9DD1300FD6DC6 /* RichEditorView.h in Sources */,
 				07D57CD722A6656700B4E8B8 /* UILabel+Extension.swift in Sources */,
 				07D57CB522A5002000B4E8B8 /* ToolBarViewController.swift in Sources */,
 				0760AF0A22A7FE3500B124FB /* DetailViewController.swift in Sources */,
-				07593C5122B92079003B9361 /* RichEditorView.swift in Sources */,
 				07593C4E22B91CD6003B9361 /* UIView+Responder.swift in Sources */,
 				07D57CD522A656DB00B4E8B8 /* HtmlUtils.swift in Sources */,
 				07D57CB322A4FFEF00B4E8B8 /* UITableView+Extension.swift in Sources */,
@@ -532,6 +519,7 @@
 				07D57C9422A10C4D00B4E8B8 /* ViewController.swift in Sources */,
 				07D57CB722A5006200B4E8B8 /* UIView+Extenstion.swift in Sources */,
 				07D57CB122A4FC6F00B4E8B8 /* TableViewController.swift in Sources */,
+				0770C48922B9DDA600FD6DC6 /* RichEditorView.swift in Sources */,
 				07593C4B22B91CD6003B9361 /* CJWWebView+HackishAccessoryHiding.m in Sources */,
 				07593C4D22B91CD6003B9361 /* UIColor+Extensions.swift in Sources */,
 				07D57C9222A10C4D00B4E8B8 /* AppDelegate.swift in Sources */,
@@ -705,6 +693,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.ikaola.game;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "game/Widget/RichEditor/RichEditorView-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -727,6 +716,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.ikaola.game;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "game/Widget/RichEditor/RichEditorView-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";

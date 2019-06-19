@@ -149,11 +149,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Motion/Motion.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework"
-<<<<<<< HEAD
   install_framework "${BUILT_PRODUCTS_DIR}/Popover/Popover.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RichEditorView/RichEditorView.framework"
-=======
->>>>>>> aef8c4a6194c15d0faf87a336133c2b7882b6232
   install_framework "${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework"
@@ -165,11 +161,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Motion/Motion.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework"
-<<<<<<< HEAD
   install_framework "${BUILT_PRODUCTS_DIR}/Popover/Popover.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RichEditorView/RichEditorView.framework"
-=======
->>>>>>> aef8c4a6194c15d0faf87a336133c2b7882b6232
   install_framework "${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework"

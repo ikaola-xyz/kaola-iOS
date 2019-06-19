@@ -245,6 +245,10 @@ RE.setBlockquote = function() {
     document.execCommand('formatBlock', false, '<blockquote>');
 };
 
+RE.setDiv = function() {
+    document.execCommand('formatBlock', false, 'div');
+};
+
 RE.insertHTML = function(html) {
     RE.restorerange();
     document.execCommand('insertHTML', false, html);

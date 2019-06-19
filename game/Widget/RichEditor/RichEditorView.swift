@@ -47,8 +47,8 @@ import UIKit
     /// Input accessory view to display over they keyboard.
     /// Defaults to nil
     open override var inputAccessoryView: UIView? {
-        get { return webView.cjw_inputAccessoryView }
-        set { webView.cjw_inputAccessoryView = newValue }
+        get { return webView.inputAccessoryView }
+//        set { webView.inputAccessoryView = newValue }
     }
 
     /// The internal UIWebView that is used to display the text.
@@ -150,7 +150,7 @@ import UIKit
         webView.scrollView.delegate = self
         webView.scrollView.clipsToBounds = false
         
-        webView.cjw_inputAccessoryView = nil
+//        webView.inputAccessoryView = nil
         
         self.addSubview(webView)
         
@@ -308,6 +308,10 @@ import UIKit
         runJS("RE.setBlockquote()");
     }
     
+    public func div() {
+        runJS("RE.setDiv()");
+    }
+    
     public func alignLeft() {
         runJS("RE.setJustifyLeft();")
     }
@@ -368,7 +372,7 @@ import UIKit
 
     // MARK: UIWebViewDelegate
 
-    public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
 
         // Handle pre-defined editor actions
         let callbackPrefix = "re-callback://"

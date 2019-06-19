@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 import Popover
-import RichEditorView
 
 class EditorFontMenu {
+    
+    let height: CGFloat = 40
     
     var popover: Popover!
     
@@ -21,7 +22,7 @@ class EditorFontMenu {
     
     var editorView: RichEditorView!
     
-    let height: CGFloat = 40
+    var bntBlockquote: UIButton!
     
     func attach(editorView: RichEditorView ,fromView: UIView){
         self.editorView = editorView
@@ -48,7 +49,7 @@ class EditorFontMenu {
         btnItalic.addTarget(self, action: #selector(self.italic), for: .touchUpInside)
         contentView.addSubview(btnItalic)
         
-        let bntBlockquote = UIButton()
+        bntBlockquote = UIButton()
         bntBlockquote.frame = CGRect(x: 100, y: 0, width: 50, height: height)
         bntBlockquote.setTitle("Q", for: .normal)
         bntBlockquote.addTarget(self, action: #selector(self.blockquote), for: .touchUpInside)
@@ -66,6 +67,10 @@ class EditorFontMenu {
         popover.show(contentView, fromView: fromView)
     }
     
+    func dismiss(){
+        popover.dismiss()
+    }
+    
     @objc func bold(){
         editorView.bold()
     }
@@ -74,8 +79,18 @@ class EditorFontMenu {
         editorView.italic()
     }
     
+    var hasBlockquoted = false
+    
     @objc func blockquote(){
-        editorView.blockquote()
+        if(!hasBlockquoted){
+            bntBlockquote.setTitleColor(UIColor.green, for: .normal)
+            hasBlockquoted = true
+            editorView.blockquote()
+        }else{
+            bntBlockquote.setTitleColor(UIColor.white, for: .normal)
+            hasBlockquoted = false
+            editorView.div()
+        }
     }
     
     @objc func header1(){

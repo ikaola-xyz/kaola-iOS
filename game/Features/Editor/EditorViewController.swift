@@ -11,6 +11,8 @@ import Popover
 
 class EditorViewController: ToolBarViewController {
     
+    var tfTitle: UITextField!
+    
     var editor: RichEditorView!
     
     var editorBar: UIView!
@@ -19,8 +21,11 @@ class EditorViewController: ToolBarViewController {
     
     var fontMenu: EditorFontMenu!
     
+    var editorPresenter: EditorPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        editorPresenter = EditorPresenter()
         initViews()
         initEditorBar()
     }
@@ -37,10 +42,30 @@ class EditorViewController: ToolBarViewController {
     }
     
     func initViews(){
-        editor = RichEditorView(frame: CGRect(x: PADDING_DEFAULT, y: PADDING_DEFAULT, width: ScreenWidth - PADDING_DEFAULT*2, height: ScreenHeight))
+        tfTitle = UITextField()
+        tfTitle.frame = CGRect(x: PADDING_DEFAULT, y: NavgationBarHeight, width: ScreenWidth - PADDING_DEFAULT*2, height: 56)
+        tfTitle.font = UIFont.boldSystemFont(ofSize: 18)
+        tfTitle.backgroundColor = UIColor.white
+        tfTitle.textColor = UIColor.grayDark()
+        tfTitle.placeholder = "请输入标题..."
+        addSubview(tfTitle)
+        
+        let divider = UIImageView()
+        divider.frame = CGRect(x: PADDING_DEFAULT, y: tfTitle.frame.maxY, width: tfTitle.getWidth(), height: 1)
+        divider.backgroundColor = UIColor.border()
+        addSubview(divider)
+        
+        let editorHeight: CGFloat = ScreenHeight - NavgationBarHeight - 10 - tfTitle.getHeight()
+        editor = RichEditorView(frame: CGRect(x: PADDING_DEFAULT, y: tfTitle.frame.maxY + PADDING_DEFAULT, width: ScreenWidth - PADDING_DEFAULT*2, height: editorHeight))
         editor.placeholder = "写点什么呢..."
-        editor.backgroundColor = UIColor.gray
         addSubview(editor)
+        
+        self.setRightItem(title: "发布", action: #selector(publish))
+    }
+    
+    @objc func publish(){
+        print("publish")
+        editorPresenter.publish(title: tfTitle.text!, content: editor.contentHTML)
     }
     
     func initEditorBar(){
@@ -70,6 +95,7 @@ class EditorViewController: ToolBarViewController {
 
     @objc func closeEditorBar(){
         editor.endEditing(true)
+        tfTitle.endEditing(true)
     }
     
     @objc func showFontMenu(){

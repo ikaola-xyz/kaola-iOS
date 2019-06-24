@@ -32,4 +32,21 @@ class StrategyModel{
                 }
         }
     }
+    
+    func publish(userId: String, gameId: String, title: String, content: String){
+        print("strategy publish")
+        let parameters = [
+            "userId" : userId,
+            "gameId" : gameId,
+            "title" : title,
+            "content" : content,
+            "isPublished": "true"
+        ]
+        
+        let url = ApiUtils.strategy()
+        Alamofire.request(url, method: .post, parameters: parameters)
+            .responseJSON { response in
+                print(response)
+        }
+    }
 }

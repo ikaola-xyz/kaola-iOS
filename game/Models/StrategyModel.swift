@@ -33,7 +33,7 @@ class StrategyModel{
         }
     }
     
-    func publish(userId: String, gameId: String, title: String, content: String){
+    func publish(userId: String, gameId: String, title: String, content: String, callback: @escaping (Bool)->Void){
         print("strategy publish")
         let parameters = [
             "userId" : userId,
@@ -43,9 +43,21 @@ class StrategyModel{
             "isPublished": "true"
         ]
         
+        let headers = [
+            "Authorization": "db53954fe36070b2c3f01449cb790d8e"
+        ]
+        
         let url = ApiUtils.strategy()
-        Alamofire.request(url, method: .post, parameters: parameters)
+        Alamofire.request(url, method: .post, parameters: parameters, headers: headers)
+            .validate()
             .responseJSON { response in
+                if(response.result.isSuccess){
+                    print("publish success")
+                    callback(true)
+                }else{
+                    print("publish failed")
+                    callback(false)
+                }
                 print(response)
         }
     }

@@ -64,8 +64,9 @@ class EditorViewController: ToolBarViewController {
     }
     
     @objc func publish(){
-        print("publish")
-        editorPresenter.publish(title: tfTitle.text!, content: editor.contentHTML)
+        editorPresenter.publish(title: tfTitle.text!, content: editor.contentHTML) { isSuccess in
+            self.finish()
+        }
     }
     
     func initEditorBar(){
@@ -106,6 +107,7 @@ class EditorViewController: ToolBarViewController {
         let info = notification.userInfo
         let keyboardRect = (info?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let options = UIView.AnimationOptions.curveEaseIn
+        
         if(notification.name == UIResponder.keyboardWillShowNotification){
             self.editorBar.isHidden = false
             UIView.animate(withDuration: 0.25, delay: 0, options: options, animations: {

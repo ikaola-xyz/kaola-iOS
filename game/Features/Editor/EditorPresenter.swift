@@ -21,6 +21,7 @@ class EditorPresenter{
                               gameId: "5cef8b7f46e0fb00017bff4d",
                               title: title,
                               content: content,
+                              cover: "",
                               callback: callback)
     }
 }

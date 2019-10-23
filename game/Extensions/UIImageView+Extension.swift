@@ -10,31 +10,23 @@ import Foundation
 import UIKit
 import Kingfisher
 
-public extension UIImageView{
+extension UIImageView{
     
-//    public func setImageWithUrl(_ imageUrl : String, _ ignoreSaveModel: Bool){
-//        if(ignoreSaveModel){
-//            kf.setImage(with: URL(string:imageUrl));
-//        }else{
-//            setImageWithUrl(imageUrl)
-//        }
-//    }
+    public func setImageWithUrl(_ imageUrl : String, _ ignoreSaveModel: Bool){
+        if(ignoreSaveModel){
+            kf.setImage(with: URL(string:imageUrl));
+        }else{
+            setImageWithUrl(imageUrl)
+        }
+    }
     
-//    public func setImageWithUrl(_ imageUrl : String){
-//        if(!SettingManager.isSaveModel() && !imageUrl.isEmpty){
-//            kf.setImage(with: URL(string:imageUrl));
-//        }else{
-//            setImageWithName("cover_placeholder")
-//        }
-//    }
-//    
-//    public func setImageWithUrl(_ imageUrl : String, placeholderImage : String){
-//        if(!SettingManager.isSaveModel()){
-//            kf.setImage(with: URL(string:imageUrl), placeholder: UIImage(named: placeholderImage), options: nil, progressBlock: nil, completionHandler: nil)
-//        }else{
-//            setImageWithName("cover_placeholder")
-//        }
-//    }
+    public func setImageWithUrl(_ imageUrl : String){
+        if(!imageUrl.isEmpty){
+            kf.setImage(with: URL(string:imageUrl));
+        }else{
+            setImageWithName("ic_action_back")
+        }
+    }
     
     public func setImageWithName(_ image : String){
         self.image = UIImage(named: image)
@@ -54,4 +46,8 @@ public extension UIImageView{
         self.layer.borderColor = borderColor.cgColor
     }
     
+    public func centerCrop(){
+        self.contentMode = .scaleAspectFill
+        self.clipsToBounds = true
+    }
 }

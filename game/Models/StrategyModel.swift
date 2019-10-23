@@ -13,45 +13,46 @@ import ObjectMapper
 class StrategyModel{
     
     func getById(id: String, callback: @escaping (Strategy)->Void){
-        let url = ApiUtils.strategy(id: id)
-        Alamofire.request(url).responseJSON { (response) in
-            if(response.result.isSuccess){
-                let result: Strategy = Mapper<Strategy>().map(JSONObject: response.result.value)!
+        let url = ApiUtils.strategies(id: id)
+        AF.request(url).responseJSON { (response) in
+            if(response.error == nil){
+                let result: Strategy = Mapper<Strategy>().map(JSONObject: response.value)!
                 callback(result)
             }
         }
     }
     
     func getAll(callback: @escaping (Array<Strategy>)->Void){
-        let url = ApiUtils.strategy()
-        Alamofire.request(url)
+        let url = ApiUtils.strategies()
+        AF.request(url)
             .responseJSON { response in
-                if(response.result.isSuccess){
-                    let results : Array<Strategy> = Mapper<Strategy>().mapArray(JSONObject: response.result.value)!
+                if(response.error == nil){
+                    let results : Array<Strategy> = Mapper<Strategy>().mapArray(JSONObject: response.value)!
                     callback(results)
                 }
         }
     }
     
-    func publish(userId: String, gameId: String, title: String, content: String, callback: @escaping (Bool)->Void){
+    func publish(userId: String, gameId: String, title: String, content: String, cover: String,callback: @escaping (Bool)->Void){
         print("strategy publish")
         let parameters = [
             "userId" : userId,
             "gameId" : gameId,
             "title" : title,
             "content" : content,
+            "cover" : cover,
             "isPublished": "true"
         ]
         
-        let headers = [
-            "Authorization": "db53954fe36070b2c3f01449cb790d8e"
+        let headers: HTTPHeaders = [
+            "Authorization": "a301d61a8b96548f95053556b6ddf7fd"
         ]
         
-        let url = ApiUtils.strategy()
-        Alamofire.request(url, method: .post, parameters: parameters, headers: headers)
-            .validate()
-            .responseJSON { response in
-                if(response.result.isSuccess){
+        let url = ApiUtils.strategies()
+        
+        AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: headers, interceptor: nil)
+            .validate().responseJSON { (response) in
+                if(response.error == nil){
                     print("publish success")
                     callback(true)
                 }else{
@@ -60,5 +61,18 @@ class StrategyModel{
                 }
                 print(response)
         }
+        
+//        AF.request(url, method: .post, parameters: parameters, headers: headers)
+//            .validate()
+//            .responseJSON { response in
+//                if(response.error == nil){
+//                    print("publish success")
+//                    callback(true)
+//                }else{
+//                    print("publish failed")
+//                    callback(false)
+//                }
+//                print(response)
+//        }
     }
 }

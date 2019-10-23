@@ -8,7 +8,7 @@
 
 import Foundation
 
-let HOST_NAME : String = "http://47.92.140.191:8080/"
+let HOST_NAME : String = "http://api.dev.ikaola.xyz/"
 
 class ApiUtils{
     
@@ -20,11 +20,19 @@ class ApiUtils{
         return String(format: "%@%@/%@", HOST_NAME, action, param1)
     }
     
-    class func strategy() -> String {
-        return buildUrl("strategy")
+    class func strategies() -> String {
+        return buildUrl("strategies")
     }
     
-    class func strategy(id: String) -> String {
-        return buildUrl("strategy", param1: id)
+    class func strategies(id: String) -> String {
+        return buildUrl("strategies", param1: id)
     }
+    
+    class func games() -> String {
+        return buildUrl("games")
+    }
+    
+    class func token() -> String {
+         return buildUrl("token")
+     }
 }

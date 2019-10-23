@@ -11,6 +11,13 @@
 		0716FCB922AC078D00DA5E15 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCB822AC078D00DA5E15 /* UITextField+Extension.swift */; };
 		0716FCBC22ACB67200DA5E15 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCBB22ACB67200DA5E15 /* EditorViewController.swift */; };
 		0716FCBE22ACC27D00DA5E15 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716FCBD22ACC27D00DA5E15 /* TimeUtils.swift */; };
+		071C5E1E232F328E009DB0CF /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C5E1D232F328E009DB0CF /* GamesViewController.swift */; };
+		071C5E20232F337F009DB0CF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C5E1F232F337F009DB0CF /* Game.swift */; };
+		071C5E22232F5DCF009DB0CF /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C5E21232F5DCF009DB0CF /* GameModel.swift */; };
+		071C5E24232F5E61009DB0CF /* GamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C5E23232F5E61009DB0CF /* GamesPresenter.swift */; };
+		071C5E26232F6427009DB0CF /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C5E25232F6427009DB0CF /* GameCell.swift */; };
+		071C5E28232F6B7C009DB0CF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C5E27232F6B7C009DB0CF /* ImagePicker.swift */; };
+		071C5E2A232F749E009DB0CF /* MUIWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C5E29232F749E009DB0CF /* MUIWebView.swift */; };
 		071E5D6322AE9E7C007FA6EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E5D6222AE9E7C007FA6EC /* User.swift */; };
 		074FBB8F22B8BFF200B477F0 /* EditorFontMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074FBB8E22B8BFF200B477F0 /* EditorFontMenu.swift */; };
 		07593C4A22B91CD6003B9361 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07593C4722B91CD6003B9361 /* String+Extensions.swift */; };
@@ -28,6 +35,9 @@
 		0770C48622B9DD1300FD6DC6 /* RichEditorView.h in Sources */ = {isa = PBXBuildFile; fileRef = 07593C3D22B91A6D003B9361 /* RichEditorView.h */; };
 		0770C48922B9DDA600FD6DC6 /* RichEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0770C48822B9DDA500FD6DC6 /* RichEditorView.swift */; };
 		0770C48B22B9ECA000FD6DC6 /* rich_editor.js in Resources */ = {isa = PBXBuildFile; fileRef = 0770C48A22B9ECA000FD6DC6 /* rich_editor.js */; };
+		077D2F6123541AAF00DDA093 /* QiniuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F6023541AAF00DDA093 /* QiniuHelper.swift */; };
+		077D2F63235459B200DDA093 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F62235459B200DDA093 /* String+Extension.swift */; };
+		077D2F662360255800DDA093 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F652360255800DDA093 /* LoginViewController.swift */; };
 		079074D622A426CC00EECD2D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D522A426CC00EECD2D /* MainTabViewController.swift */; };
 		079074D922A4271600EECD2D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D822A4271600EECD2D /* MineViewController.swift */; };
 		079074DC22A42CB600EECD2D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074DB22A42CB600EECD2D /* BaseViewController.swift */; };
@@ -64,6 +74,13 @@
 		0716FCB822AC078D00DA5E15 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		0716FCBB22ACB67200DA5E15 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		0716FCBD22ACC27D00DA5E15 /* TimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
+		071C5E1D232F328E009DB0CF /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		071C5E1F232F337F009DB0CF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		071C5E21232F5DCF009DB0CF /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		071C5E23232F5E61009DB0CF /* GamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesPresenter.swift; sourceTree = "<group>"; };
+		071C5E25232F6427009DB0CF /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		071C5E27232F6B7C009DB0CF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		071C5E29232F749E009DB0CF /* MUIWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUIWebView.swift; sourceTree = "<group>"; };
 		071E5D6222AE9E7C007FA6EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		074FBB8E22B8BFF200B477F0 /* EditorFontMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorFontMenu.swift; sourceTree = "<group>"; };
 		07593C3D22B91A6D003B9361 /* RichEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RichEditorView.h; sourceTree = "<group>"; };
@@ -81,6 +98,9 @@
 		0760AF0922A7FE3500B124FB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0770C48822B9DDA500FD6DC6 /* RichEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RichEditorView.swift; sourceTree = "<group>"; };
 		0770C48A22B9ECA000FD6DC6 /* rich_editor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rich_editor.js; sourceTree = "<group>"; };
+		077D2F6023541AAF00DDA093 /* QiniuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiniuHelper.swift; sourceTree = "<group>"; };
+		077D2F62235459B200DDA093 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		077D2F652360255800DDA093 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		079074D522A426CC00EECD2D /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		079074D822A4271600EECD2D /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		079074DB22A42CB600EECD2D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +167,15 @@
 			path = Editor;
 			sourceTree = "<group>";
 		};
+		071C5E1C232F3275009DB0CF /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				071C5E1D232F328E009DB0CF /* GamesViewController.swift */,
+				071C5E23232F5E61009DB0CF /* GamesPresenter.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
 		07593C3B22B91873003B9361 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,13 +196,24 @@
 				07593C4322B91CD5003B9361 /* UIView+Responder.swift */,
 				07593C3E22B91A6D003B9361 /* RichEditorView-Bridging-Header.h */,
 				07593C3D22B91A6D003B9361 /* RichEditorView.h */,
+				071C5E29232F749E009DB0CF /* MUIWebView.swift */,
 			);
 			path = RichEditor;
+			sourceTree = "<group>";
+		};
+		077D2F642360253800DDA093 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				077D2F652360255800DDA093 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		079074D322A4265800EECD2D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				077D2F642360253800DDA093 /* Login */,
+				071C5E1C232F3275009DB0CF /* Games */,
 				0716FCBA22ACB64500DA5E15 /* Editor */,
 				0716FCB322AC017E00DA5E15 /* Search */,
 				07D57CC922A611A700B4E8B8 /* Detail */,
@@ -221,6 +261,7 @@
 				07D57CD622A6656700B4E8B8 /* UILabel+Extension.swift */,
 				0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */,
 				0716FCB822AC078D00DA5E15 /* UITextField+Extension.swift */,
+				077D2F62235459B200DDA093 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,6 +313,8 @@
 				07D57CA622A4BDA900B4E8B8 /* ApiUtils.swift */,
 				07D57CD422A656DB00B4E8B8 /* HtmlUtils.swift */,
 				0716FCBD22ACC27D00DA5E15 /* TimeUtils.swift */,
+				071C5E27232F6B7C009DB0CF /* ImagePicker.swift */,
+				077D2F6023541AAF00DDA093 /* QiniuHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -281,6 +324,7 @@
 			children = (
 				07D57CA922A4BEAD00B4E8B8 /* Strategy.swift */,
 				071E5D6222AE9E7C007FA6EC /* User.swift */,
+				071C5E1F232F337F009DB0CF /* Game.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -289,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				07D57CAC22A4EAE900B4E8B8 /* StrategyModel.swift */,
+				071C5E21232F5DCF009DB0CF /* GameModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				07D57CC322A5094A00B4E8B8 /* StrategyCell.swift */,
+				071C5E25232F6427009DB0CF /* GameCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -465,12 +511,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-game/Pods-game-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/Popover/Popover.framework",
+				"${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -478,12 +526,14 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Popover.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Qiniu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -500,7 +550,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071C5E22232F5DCF009DB0CF /* GameModel.swift in Sources */,
 				0770C48422B9DD1300FD6DC6 /* CJWWebView+HackishAccessoryHiding.h in Sources */,
+				077D2F6123541AAF00DDA093 /* QiniuHelper.swift in Sources */,
 				0770C48522B9DD1300FD6DC6 /* RichEditorView-Bridging-Header.h in Sources */,
 				0770C48622B9DD1300FD6DC6 /* RichEditorView.h in Sources */,
 				07D57CD722A6656700B4E8B8 /* UILabel+Extension.swift in Sources */,
@@ -512,18 +564,22 @@
 				0760AF0422A6A96B00B124FB /* UIImageView+Extension.swift in Sources */,
 				07D57CC422A5094A00B4E8B8 /* StrategyCell.swift in Sources */,
 				0716FCBC22ACB67200DA5E15 /* EditorViewController.swift in Sources */,
+				071C5E28232F6B7C009DB0CF /* ImagePicker.swift in Sources */,
 				07D57CCD22A616D100B4E8B8 /* DetailPresenter.swift in Sources */,
 				07D57CAD22A4EAE900B4E8B8 /* StrategyModel.swift in Sources */,
 				07593C4C22B91CD6003B9361 /* RichEditorOptionItem.swift in Sources */,
+				071C5E2A232F749E009DB0CF /* MUIWebView.swift in Sources */,
 				07593C4A22B91CD6003B9361 /* String+Extensions.swift in Sources */,
 				07D57CBC22A504D900B4E8B8 /* UIViewController+Extension.swift in Sources */,
 				0716FCB922AC078D00DA5E15 /* UITextField+Extension.swift in Sources */,
 				079074DC22A42CB600EECD2D /* BaseViewController.swift in Sources */,
+				071C5E26232F6427009DB0CF /* GameCell.swift in Sources */,
 				07D57C9422A10C4D00B4E8B8 /* ViewController.swift in Sources */,
 				07D57CB722A5006200B4E8B8 /* UIView+Extenstion.swift in Sources */,
 				07D57CB122A4FC6F00B4E8B8 /* TableViewController.swift in Sources */,
 				0770C48922B9DDA600FD6DC6 /* RichEditorView.swift in Sources */,
 				07C2C55D22C0B14B00F1C83C /* EditorPresenter.swift in Sources */,
+				077D2F63235459B200DDA093 /* String+Extension.swift in Sources */,
 				07593C4B22B91CD6003B9361 /* CJWWebView+HackishAccessoryHiding.m in Sources */,
 				07593C4D22B91CD6003B9361 /* UIColor+Extensions.swift in Sources */,
 				07D57C9222A10C4D00B4E8B8 /* AppDelegate.swift in Sources */,
@@ -532,14 +588,18 @@
 				07D57CAA22A4BEAD00B4E8B8 /* Strategy.swift in Sources */,
 				074FBB8F22B8BFF200B477F0 /* EditorFontMenu.swift in Sources */,
 				071E5D6322AE9E7C007FA6EC /* User.swift in Sources */,
+				077D2F662360255800DDA093 /* LoginViewController.swift in Sources */,
 				0716FCB522AC01AB00DA5E15 /* SearchViewController.swift in Sources */,
 				0716FCBE22ACC27D00DA5E15 /* TimeUtils.swift in Sources */,
 				07D57CBF22A5056E00B4E8B8 /* IndexViewController.swift in Sources */,
 				07B8A63222B37EC000726016 /* KeyboardManager.swift in Sources */,
 				079074D622A426CC00EECD2D /* MainTabViewController.swift in Sources */,
+				071C5E20232F337F009DB0CF /* Game.swift in Sources */,
 				07D57CBA22A500C500B4E8B8 /* Demins.swift in Sources */,
+				071C5E24232F5E61009DB0CF /* GamesPresenter.swift in Sources */,
 				079074D922A4271600EECD2D /* MineViewController.swift in Sources */,
 				07D57CA722A4BDA900B4E8B8 /* ApiUtils.swift in Sources */,
+				071C5E1E232F328E009DB0CF /* GamesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

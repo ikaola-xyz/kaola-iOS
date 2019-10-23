@@ -12,9 +12,9 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
 
     let titles = ["首页","推荐","社区","我的"]
     
-    let v1 = IndexViewController()
+    let indexViewController = IndexViewController()
     let v2 = MineViewController()
-    let v3 = MineViewController()
+    let gamesViewController = GamesViewController()
     let v4 = MineViewController()
     
     override func viewDidLoad() {
@@ -25,10 +25,10 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func initViews(){
-        self.viewControllers = [v1, v2, v3, v4]
-        v1.tabBarItem.title = "首页"
+        self.viewControllers = [indexViewController, v2, gamesViewController, v4]
+        indexViewController.tabBarItem.title = "首页"
         v2.tabBarItem.title = "推荐"
-        v3.tabBarItem.title = "社区"
+        gamesViewController.tabBarItem.title = "社区"
         v4.tabBarItem.title = "我的"
         
         let titleView = UIView()

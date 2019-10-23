@@ -50,8 +50,11 @@ class IndexViewController: TableViewController, IndexViewDelegate {
     
     @objc func create(){
         print("create")
-        let editorViewController = EditorViewController()
-        push(viewController: editorViewController)
+//        let editorViewController = EditorViewController()
+//        push(viewController: editorViewController)
+        
+        let loginViewController = LoginViewController()
+        push(viewController: loginViewController)
     }
     
     func showStategies(result: Array<Strategy>) {
@@ -68,7 +71,6 @@ class IndexViewController: TableViewController, IndexViewDelegate {
     }
     
     override func createCell(_ indexPath: IndexPath) -> UITableViewCell {
-        print("IndexViewController createCell")
         let position = indexPath.row
         let strategy = strategies[position]
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! StrategyCell

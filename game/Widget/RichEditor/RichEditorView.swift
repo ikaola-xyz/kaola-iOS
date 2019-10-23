@@ -47,12 +47,16 @@ import UIKit
     /// Input accessory view to display over they keyboard.
     /// Defaults to nil
 //    open override var inputAccessoryView: UIView? {
-//        get { return webView.inputAccessoryView }
-//        set { webView.inputAccessoryView = newValue }
+//        get { return nil }
+////        set { webView.inputAccessoryView = newValue }
 //    }
 
+    open override var inputAccessoryView: UIView? {
+        return nil
+    }
+    
     /// The internal UIWebView that is used to display the text.
-    open private(set) var webView: UIWebView
+    open private(set) var webView: MUIWebView
 
     /// Whether or not scroll is enabled on the view.
     open var isScrollEnabled: Bool = true {
@@ -123,13 +127,13 @@ import UIKit
     // MARK: Initialization
     
     public override init(frame: CGRect) {
-        webView = UIWebView()
+        webView = MUIWebView()
         super.init(frame: frame)
         setup()
     }
 
     required public init?(coder aDecoder: NSCoder) {
-        webView = UIWebView()
+        webView = MUIWebView()
         super.init(coder: aDecoder)
         setup()
     }

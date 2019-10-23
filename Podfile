@@ -3,7 +3,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'game' do
-    pod 'Alamofire', '~> 4.7'
+    pod 'Alamofire', '~> 5.0.0-rc.2'
     pod 'Kingfisher', '~> 4.0'
     pod 'SnapKit', '~> 4.0.0'
     pod 'ObjectMapper', '~> 3.4'
@@ -16,4 +16,5 @@ target 'game' do
     pod 'UMCSecurityPlugins'
     pod 'Toast-Swift', '~> 4.0.0'
     pod "Popover"
+    pod "Qiniu", "~> 7.1"
 end

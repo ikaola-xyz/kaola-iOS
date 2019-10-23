@@ -8,8 +8,10 @@
 
 import UIKit
 import Popover
+import Toast_Swift
+import Qiniu
 
-class EditorViewController: ToolBarViewController {
+class EditorViewController: ToolBarViewController, ImagePickerDelegate {
     
     var tfTitle: UITextField!
     
@@ -22,6 +24,8 @@ class EditorViewController: ToolBarViewController {
     var fontMenu: EditorFontMenu!
     
     var editorPresenter: EditorPresenter!
+    
+    var imagePicker: ImagePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +68,14 @@ class EditorViewController: ToolBarViewController {
     }
     
     @objc func publish(){
+        self.view.makeToastActivity(.center)
         editorPresenter.publish(title: tfTitle.text!, content: editor.contentHTML) { isSuccess in
-            self.finish()
+            self.view.hideToastActivity()
+            if(isSuccess){
+                self.finish()
+            }else{
+                self.view.makeToast("发布失败")
+            }
         }
     }
     
@@ -89,6 +99,13 @@ class EditorViewController: ToolBarViewController {
         btnFont.addTarget(self, action: #selector(EditorViewController.showFontMenu), for: .touchUpInside)
         btnFont.setTitle("A", for: .normal)
         editorBar.addSubview(btnFont)
+        
+        let btnPicture = UIButton()
+        btnPicture.frame = CGRect(x: 56 * 2, y: 0, width: 56, height: 56)
+        btnPicture.setTitle("PIC", for: .normal)
+        btnPicture.addTarget(self, action: #selector(EditorViewController.addPicture), for: .touchUpInside)
+        editorBar.addSubview(btnPicture)
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         
         fontMenu = EditorFontMenu()
         fontMenu.attach(editorView: editor, fromView: btnFont)
@@ -125,5 +142,22 @@ class EditorViewController: ToolBarViewController {
                 }
             }, completion: nil)
         }
+    }
+    
+    @objc func addPicture(){
+        print("add picture")
+        self.imagePicker.present(from: btnFont)
+    }
+    
+    func didSelect(image: UIImage?) {
+        print("upload")
+        QiniuHelper.upload(image: image!) { (hash) in
+            self.editor.insertImage("http://img.ikaola.xyz/"+hash, alt: hash)
+            print(hash)
+        }
+    }
+    
+    func upload(){
+        
     }
 }

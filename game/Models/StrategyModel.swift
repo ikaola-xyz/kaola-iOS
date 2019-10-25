@@ -25,16 +25,21 @@ class StrategyModel{
     func getAll(callback: @escaping (Array<Strategy>)->Void){
         let url = ApiUtils.strategies()
         AF.request(url)
+            .validate()
             .responseJSON { response in
-                if(response.error == nil){
+                switch response.result{
+                case .success:
                     let results : Array<Strategy> = Mapper<Strategy>().mapArray(JSONObject: response.value)!
                     callback(results)
+                    break
+                case .failure(_):
+                    callback(Array<Strategy>())
+                    break
                 }
         }
     }
     
     func publish(userId: String, gameId: String, title: String, content: String, cover: String,callback: @escaping (Bool)->Void){
-        print("strategy publish")
         let parameters = [
             "userId" : userId,
             "gameId" : gameId,
@@ -49,30 +54,16 @@ class StrategyModel{
         ]
         
         let url = ApiUtils.strategies()
-        
         AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: headers, interceptor: nil)
             .validate().responseJSON { (response) in
-                if(response.error == nil){
+                switch response.result{
+                case .success:
                     print("publish success")
                     callback(true)
-                }else{
+                case .failure:
                     print("publish failed")
                     callback(false)
                 }
-                print(response)
         }
-        
-//        AF.request(url, method: .post, parameters: parameters, headers: headers)
-//            .validate()
-//            .responseJSON { response in
-//                if(response.error == nil){
-//                    print("publish success")
-//                    callback(true)
-//                }else{
-//                    print("publish failed")
-//                    callback(false)
-//                }
-//                print(response)
-//        }
     }
 }

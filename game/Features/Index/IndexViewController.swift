@@ -50,11 +50,13 @@ class IndexViewController: TableViewController, IndexViewDelegate {
     
     @objc func create(){
         print("create")
-//        let editorViewController = EditorViewController()
-//        push(viewController: editorViewController)
-        
-        let loginViewController = LoginViewController()
-        push(viewController: loginViewController)
+        if(LoginManager.isLogin()){
+            let editorViewController = EditorViewController()
+            push(viewController: editorViewController)
+        }else{
+            let loginViewController = LoginViewController()
+            push(viewController: loginViewController)
+        }
     }
     
     func showStategies(result: Array<Strategy>) {

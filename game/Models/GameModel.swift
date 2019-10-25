@@ -14,12 +14,16 @@ class GameModel{
     
     func getAll(callback: @escaping (Array<Game>)->Void){
         let url = ApiUtils.games()
-        
         AF.request(url)
+            .validate() //状态码在 (200..<300)
             .responseJSON { response in
-                if(response.error == nil){
+                switch response.result{
+                case .success:
+                    print("success")
                     let results : Array<Game> = Mapper<Game>().mapArray(JSONObject: response.value)!
                     callback(results)
+                case .failure:
+                    print("failure")
                 }
         }
     }

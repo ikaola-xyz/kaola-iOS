@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class User: Mappable{
+class User: NSObject, Mappable, NSCoding{
     
     var id: String!
     
@@ -19,8 +19,6 @@ class User: Mappable{
     
     var intro: String!
     
-    var created: Double!
-    
     required init?(map: Map) {
     }
     
@@ -29,6 +27,27 @@ class User: Mappable{
         nickname <- map["nickname"]
         avatar <- map["avatar"]
         intro <- map["intro"]
-        created <- map["created"]
+    }
+    
+    init(id: String, nickname: String, avatar: String, intro: String) {
+        self.id = id
+        self.nickname = nickname
+        self.avatar = avatar
+        self.intro = intro
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        let id = aDecoder.decodeObject(forKey: "id") as! String
+        let nickname = aDecoder.decodeObject(forKey: "nickname") as! String
+        let avatar = aDecoder.decodeObject(forKey: "avatar") as! String
+        let intro = aDecoder.decodeObject(forKey: "intro") as! String
+        self.init(id: id, nickname: nickname, avatar: avatar, intro: intro)
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(id, forKey: "id")
+        aCoder.encode(nickname, forKey: "nickname")
+        aCoder.encode(avatar, forKey: "avatar")
+        aCoder.encode(intro, forKey: "intro")
     }
 }

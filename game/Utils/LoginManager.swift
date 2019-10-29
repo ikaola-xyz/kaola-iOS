@@ -16,7 +16,6 @@ class LoginManager{
     
     class func onLoginSucceeded(token: Token){
         UserDefaultsHelper.setString(key: KEY_TOKEN, value: token.token)
-        
         let defaults:UserDefaults = UserDefaults.standard
         let encodeData: Data = NSKeyedArchiver.archivedData(withRootObject: token.user)
         defaults.set(encodeData, forKey: KEY_USER)
@@ -28,6 +27,10 @@ class LoginManager{
         let decoded  = defaults.object(forKey: KEY_USER) as! Data
         let user = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! User
         return user
+    }
+    
+    class func getToken() -> String{
+        return UserDefaultsHelper.stringForKey(key: KEY_TOKEN)
     }
     
     class func isLogin() -> Bool{

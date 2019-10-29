@@ -50,7 +50,7 @@ class StrategyModel{
         ]
         
         let headers: HTTPHeaders = [
-            "Authorization": "a301d61a8b96548f95053556b6ddf7fd"
+            "Authorization": LoginManager.getToken()
         ]
         
         let url = ApiUtils.strategies()

@@ -51,8 +51,8 @@ class LoginViewController: ToolBarViewController {
     }
     
     @objc func login(){
-        var username = tfUsername.text
-        var password = tfPassword.text
+        let username = tfUsername.text
+        let password = tfPassword.text
         tokenModel.post(email: username!, password: password!, success: { (token) in
             LoginManager.onLoginSucceeded(token: token)
             print(token.token)

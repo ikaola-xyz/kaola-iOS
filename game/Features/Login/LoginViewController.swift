@@ -55,9 +55,10 @@ class LoginViewController: ToolBarViewController {
         let password = tfPassword.text
         tokenModel.post(email: username!, password: password!, success: { (token) in
             LoginManager.onLoginSucceeded(token: token)
-            print(token.token)
+            self.view.makeToast("登录成功")
+            self.pop()
         }, error: {
-            print("login failure")
+            self.view.makeToast("登录失败")
         })
     }
 }

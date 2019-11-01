@@ -22,18 +22,20 @@ class MineViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+          self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     func initViews(){
-        let topBlock = UIView()
+        let topBlock = FlatButton(title: "", titleColor: UIColor.grayMiddle())
         topBlock.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: 200)
-        topBlock.backgroundColor = UIColor.white
-        self.view.addSubview(topBlock)
+        topBlock.styleSetting()
+        topBlock.addTarget(self, action: #selector(profile), for: .touchUpInside)
+        addSubview(topBlock)
 
         avatar = UIImageView()
         avatar.frame = CGRect(x: PADDING_DEFAULT, y: topBlock.frame.height - 30 - 66, width: 66, height: 66)
         avatar.setImageWithName("ic_default_avatar")
+        avatar.setOval()
         addSubview(avatar)
         
         nickname = UILabel()
@@ -46,49 +48,34 @@ class MineViewController: BaseViewController {
         
         let btnStrategies = FlatButton(title: "我的帖子", titleColor: UIColor.grayMiddle())
         btnStrategies.frame = CGRect(x: 0 , y: topBlock.frame.maxY + PADDING_MIDDLE, width: ScreenWidth, height: 56)
-        btnStrategies.pulseColor = UIColor.grayLight()
-        btnStrategies.titleColor = UIColor.grayDark()
-        btnStrategies.backgroundColor = UIColor.white
-        btnStrategies.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        btnStrategies.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
-        btnStrategies.contentEdgeInsets = UIEdgeInsets(top: 0, left: PADDING_DEFAULT, bottom: 0, right: 0);
+        btnStrategies.styleSetting()
         addSubview(btnStrategies)
         
         let btnFav = FlatButton(title: "我的收藏", titleColor: UIColor.grayMiddle())
         btnFav.frame = CGRect(x: 0 , y: btnStrategies.frame.maxY, width: ScreenWidth, height: 56)
-        btnFav.pulseColor = UIColor.grayLight()
-        btnFav.titleColor = UIColor.grayDark()
-        btnFav.backgroundColor = UIColor.white
-        btnFav.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        btnFav.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
-        btnFav.contentEdgeInsets = UIEdgeInsets(top: 0, left: PADDING_DEFAULT, bottom: 0, right: 0);
+        btnFav.styleSetting()
         addSubview(btnFav)
         
         let btnFollows = FlatButton(title: "我的关注", titleColor: UIColor.grayMiddle())
         btnFollows.frame = CGRect(x: 0 , y: btnFav.frame.maxY, width: ScreenWidth, height: 56)
-        btnFollows.pulseColor = UIColor.grayLight()
-        btnFollows.titleColor = UIColor.grayDark()
-        btnFollows.backgroundColor = UIColor.white
-        btnFollows.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        btnFollows.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
-        btnFollows.contentEdgeInsets = UIEdgeInsets(top: 0, left: PADDING_DEFAULT, bottom: 0, right: 0);
+        btnFollows.styleSetting()
         addSubview(btnFollows)
         
         let btnSettings = FlatButton(title: "设置", titleColor: UIColor.grayMiddle())
         btnSettings.frame = CGRect(x: 0 , y: btnFollows.frame.maxY + PADDING_MIDDLE, width: ScreenWidth, height: 56)
-        btnSettings.pulseColor = UIColor.grayLight()
-        btnSettings.titleColor = UIColor.grayDark()
-        btnSettings.backgroundColor = UIColor.white
-        btnSettings.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        btnSettings.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
-        btnSettings.contentEdgeInsets = UIEdgeInsets(top: 0, left: PADDING_DEFAULT, bottom: 0, right: 0);
+        btnSettings.styleSetting()
         addSubview(btnSettings)
     }
     
     func showUser(){
         if(LoginManager.isLogin()){
             nickname.text = LoginManager.getUser().nickname
+            avatar.setImageWithUrl(LoginManager.getUser().avatar)
         }
     }
     
+    @objc func profile(){
+        let profileViewController = ProfileViewController()
+        push(viewController: profileViewController)
+    }
 }

@@ -151,7 +151,7 @@ class EditorViewController: ToolBarViewController, ImagePickerDelegate {
     
     func didSelect(image: UIImage?) {
         self.view.makeToastActivity(.center)
-        QiniuHelper.upload(image: image!) { (hash) in
+        QiniuHelper.uploadImage(image: image!) { (hash) in
             self.view.hideToastActivity()
             if(hash.isEmpty){
                 self.view.makeToast("上传失败")

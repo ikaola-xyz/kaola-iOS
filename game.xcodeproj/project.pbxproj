@@ -42,6 +42,10 @@
 		077D2F6A2361866D00DDA093 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F692361866D00DDA093 /* Token.swift */; };
 		077D2F6C2362DD0000DDA093 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F6B2362DD0000DDA093 /* LoginManager.swift */; };
 		077D2F6E2362DD6E00DDA093 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F6D2362DD6E00DDA093 /* UserDefaultsHelper.swift */; };
+		077D2F70236A92CE00DDA093 /* UploadToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F6F236A92CE00DDA093 /* UploadToken.swift */; };
+		077D2F72236AB10D00DDA093 /* FlatButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F71236AB10D00DDA093 /* FlatButton+Extensions.swift */; };
+		077D2F75236AB2D500DDA093 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F74236AB2D500DDA093 /* ProfileViewController.swift */; };
+		077D2F77236BFC9F00DDA093 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F76236BFC9F00DDA093 /* UserModel.swift */; };
 		079074D622A426CC00EECD2D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D522A426CC00EECD2D /* MainTabViewController.swift */; };
 		079074D922A4271600EECD2D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D822A4271600EECD2D /* MineViewController.swift */; };
 		079074DC22A42CB600EECD2D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074DB22A42CB600EECD2D /* BaseViewController.swift */; };
@@ -109,6 +113,10 @@
 		077D2F692361866D00DDA093 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		077D2F6B2362DD0000DDA093 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		077D2F6D2362DD6E00DDA093 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		077D2F6F236A92CE00DDA093 /* UploadToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadToken.swift; sourceTree = "<group>"; };
+		077D2F71236AB10D00DDA093 /* FlatButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlatButton+Extensions.swift"; sourceTree = "<group>"; };
+		077D2F74236AB2D500DDA093 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		077D2F76236BFC9F00DDA093 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		079074D522A426CC00EECD2D /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		079074D822A4271600EECD2D /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		079074DB22A42CB600EECD2D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -217,9 +225,18 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		077D2F73236AB2AC00DDA093 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				077D2F74236AB2D500DDA093 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		079074D322A4265800EECD2D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				077D2F73236AB2AC00DDA093 /* Profile */,
 				077D2F642360253800DDA093 /* Login */,
 				071C5E1C232F3275009DB0CF /* Games */,
 				0716FCBA22ACB64500DA5E15 /* Editor */,
@@ -270,6 +287,7 @@
 				0760AF0322A6A96B00B124FB /* UIImageView+Extension.swift */,
 				0716FCB822AC078D00DA5E15 /* UITextField+Extension.swift */,
 				077D2F62235459B200DDA093 /* String+Extension.swift */,
+				077D2F71236AB10D00DDA093 /* FlatButton+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -336,6 +354,7 @@
 				071E5D6222AE9E7C007FA6EC /* User.swift */,
 				071C5E1F232F337F009DB0CF /* Game.swift */,
 				077D2F692361866D00DDA093 /* Token.swift */,
+				077D2F6F236A92CE00DDA093 /* UploadToken.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -346,6 +365,7 @@
 				07D57CAC22A4EAE900B4E8B8 /* StrategyModel.swift */,
 				071C5E21232F5DCF009DB0CF /* GameModel.swift */,
 				077D2F672361865A00DDA093 /* TokenModel.swift */,
+				077D2F76236BFC9F00DDA093 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -576,6 +596,7 @@
 				07D57CB322A4FFEF00B4E8B8 /* UITableView+Extension.swift in Sources */,
 				077D2F6A2361866D00DDA093 /* Token.swift in Sources */,
 				0760AF0422A6A96B00B124FB /* UIImageView+Extension.swift in Sources */,
+				077D2F70236A92CE00DDA093 /* UploadToken.swift in Sources */,
 				07D57CC422A5094A00B4E8B8 /* StrategyCell.swift in Sources */,
 				0716FCBC22ACB67200DA5E15 /* EditorViewController.swift in Sources */,
 				071C5E28232F6B7C009DB0CF /* ImagePicker.swift in Sources */,
@@ -593,6 +614,7 @@
 				07D57CB122A4FC6F00B4E8B8 /* TableViewController.swift in Sources */,
 				077D2F6C2362DD0000DDA093 /* LoginManager.swift in Sources */,
 				0770C48922B9DDA600FD6DC6 /* RichEditorView.swift in Sources */,
+				077D2F77236BFC9F00DDA093 /* UserModel.swift in Sources */,
 				077D2F682361865A00DDA093 /* TokenModel.swift in Sources */,
 				07C2C55D22C0B14B00F1C83C /* EditorPresenter.swift in Sources */,
 				077D2F63235459B200DDA093 /* String+Extension.swift in Sources */,
@@ -601,6 +623,7 @@
 				07D57C9222A10C4D00B4E8B8 /* AppDelegate.swift in Sources */,
 				07D57CC122A507A800B4E8B8 /* IndexPresenter.swift in Sources */,
 				079074DF22A42D1A00EECD2D /* UIColor+Extension.swift in Sources */,
+				077D2F75236AB2D500DDA093 /* ProfileViewController.swift in Sources */,
 				07D57CAA22A4BEAD00B4E8B8 /* Strategy.swift in Sources */,
 				074FBB8F22B8BFF200B477F0 /* EditorFontMenu.swift in Sources */,
 				071E5D6322AE9E7C007FA6EC /* User.swift in Sources */,
@@ -613,6 +636,7 @@
 				071C5E20232F337F009DB0CF /* Game.swift in Sources */,
 				07D57CBA22A500C500B4E8B8 /* Demins.swift in Sources */,
 				071C5E24232F5E61009DB0CF /* GamesPresenter.swift in Sources */,
+				077D2F72236AB10D00DDA093 /* FlatButton+Extensions.swift in Sources */,
 				079074D922A4271600EECD2D /* MineViewController.swift in Sources */,
 				07D57CA722A4BDA900B4E8B8 /* ApiUtils.swift in Sources */,
 				071C5E1E232F328E009DB0CF /* GamesViewController.swift in Sources */,

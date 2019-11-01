@@ -22,6 +22,10 @@ class ApiUtils{
         return String(format: "%@%@/%@", HOST_NAME, action, param1)
     }
     
+    class func users() -> String {
+        return buildUrl("users")
+    }
+    
     class func strategies() -> String {
         return buildUrl("strategies")
     }
@@ -36,5 +40,9 @@ class ApiUtils{
     
     class func tokens() -> String {
          return buildUrl("tokens")
-     }
+    }
+    
+    class func uploadToken() -> String {
+        return buildUrl("upload/token")
+    }
 }

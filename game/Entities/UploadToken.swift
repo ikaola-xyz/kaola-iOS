@@ -1,17 +1,16 @@
 //
-//  Token.swift
+//  UploadToken.swift
 //  game
 //
-//  Created by Eric on 24/10/2019.
+//  Created by Eric on 31/10/2019.
 //  Copyright © 2019 Eric. All rights reserved.
 //
 
 import Foundation
+import Foundation
 import ObjectMapper
 
-class Token: Mappable{
-    
-    var user: User!
+class UploadToken: Mappable{
     
     var token: String!
     
@@ -20,6 +19,5 @@ class Token: Mappable{
     
     func mapping(map: Map) {
         token <- map["token"]
-        user <- map["user"]
     }
 }

@@ -17,7 +17,14 @@ class LoginManager{
     class func onLoginSucceeded(token: Token){
         UserDefaultsHelper.setString(key: KEY_TOKEN, value: token.token)
         let defaults:UserDefaults = UserDefaults.standard
-        let encodeData: Data = NSKeyedArchiver.archivedData(withRootObject: token.user)
+        let encodeData: Data = NSKeyedArchiver.archivedData(withRootObject: token.user!)
+        defaults.set(encodeData, forKey: KEY_USER)
+        defaults.synchronize()
+    }
+    
+    class func setUser(user: User){
+        let defaults:UserDefaults = UserDefaults.standard
+        let encodeData: Data = NSKeyedArchiver.archivedData(withRootObject: user)
         defaults.set(encodeData, forKey: KEY_USER)
         defaults.synchronize()
     }

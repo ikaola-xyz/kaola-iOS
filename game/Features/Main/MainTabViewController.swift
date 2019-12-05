@@ -13,24 +13,44 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
     let titles = ["首页","推荐","社区","我的"]
     
     let indexViewController = IndexViewController()
-    let v2 = MineViewController()
+    let recommendViewController = MineViewController()
     let gamesViewController = GamesViewController()
-    let v4 = MineViewController()
+    let mineViewController = MineViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "考拉"
         self.delegate = self
+        initNav()
         initViews()
     }
     
-    func initViews(){
-        self.viewControllers = [indexViewController, v2, gamesViewController, v4]
+    func initNav(){
         indexViewController.tabBarItem.title = "首页"
-        v2.tabBarItem.title = "推荐"
-        gamesViewController.tabBarItem.title = "社区"
-        v4.tabBarItem.title = "我的"
+        indexViewController.tabBarItem.image = UIImage(named: "ic_nav_index")
+        indexViewController.tabBarItem.selectedImage = UIImage(named: "ic_nav_index_selected")
+        indexViewController.tabBarItem.imageInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
         
+        recommendViewController.tabBarItem.title = "推荐"
+        recommendViewController.tabBarItem.image = UIImage(named: "ic_nav_recommend")
+        recommendViewController.tabBarItem.selectedImage = UIImage(named: "ic_nav_recommend_selected")
+        recommendViewController.tabBarItem.imageInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+        
+        gamesViewController.tabBarItem.title = "社区"
+        gamesViewController.tabBarItem.image = UIImage(named: "ic_nav_group")
+        gamesViewController.tabBarItem.selectedImage = UIImage(named: "ic_nav_group_selected")
+        gamesViewController.tabBarItem.imageInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+        
+        mineViewController.tabBarItem.title = "我的"
+        mineViewController.tabBarItem.image = UIImage(named: "ic_nav_mine")
+        mineViewController.tabBarItem.selectedImage = UIImage(named: "ic_nav_mine_selected")
+        mineViewController.tabBarItem.imageInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+
+        self.viewControllers = [indexViewController, recommendViewController, gamesViewController, mineViewController]
+        self.tabBar.tintColor = UIColor.primary()
+    }
+    
+    func initViews(){
         let titleView = UIView()
         titleView.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: HEIGHT_TOOL_BAR)
         

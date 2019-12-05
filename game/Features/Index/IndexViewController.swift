@@ -34,7 +34,7 @@ class IndexViewController: TableViewController, IndexViewDelegate {
                                  y: ScreenHeight - size - NavgationBarHeight - 16,
                                  width: size,
                                  height: size)
-        btnCreate.backgroundColor = UIColor.green
+        btnCreate.backgroundColor = UIColor.primary()
         btnCreate.text = "+"
         btnCreate.font = UIFont.boldSystemFont(ofSize: 20)
         btnCreate.textColor = UIColor.white

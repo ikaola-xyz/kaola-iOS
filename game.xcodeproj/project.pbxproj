@@ -46,6 +46,7 @@
 		077D2F72236AB10D00DDA093 /* FlatButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F71236AB10D00DDA093 /* FlatButton+Extensions.swift */; };
 		077D2F75236AB2D500DDA093 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F74236AB2D500DDA093 /* ProfileViewController.swift */; };
 		077D2F77236BFC9F00DDA093 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F76236BFC9F00DDA093 /* UserModel.swift */; };
+		077D2F79237BD79800DDA093 /* GameGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D2F78237BD79800DDA093 /* GameGridCell.swift */; };
 		079074D622A426CC00EECD2D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D522A426CC00EECD2D /* MainTabViewController.swift */; };
 		079074D922A4271600EECD2D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074D822A4271600EECD2D /* MineViewController.swift */; };
 		079074DC22A42CB600EECD2D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079074DB22A42CB600EECD2D /* BaseViewController.swift */; };
@@ -117,6 +118,7 @@
 		077D2F71236AB10D00DDA093 /* FlatButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlatButton+Extensions.swift"; sourceTree = "<group>"; };
 		077D2F74236AB2D500DDA093 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		077D2F76236BFC9F00DDA093 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		077D2F78237BD79800DDA093 /* GameGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridCell.swift; sourceTree = "<group>"; };
 		079074D522A426CC00EECD2D /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		079074D822A4271600EECD2D /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		079074DB22A42CB600EECD2D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 			children = (
 				07D57CC322A5094A00B4E8B8 /* StrategyCell.swift */,
 				071C5E25232F6427009DB0CF /* GameCell.swift */,
+				077D2F78237BD79800DDA093 /* GameGridCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-game/Pods-game-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CollectionKit/CollectionKit.framework",
 				"${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
@@ -558,6 +562,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
@@ -639,6 +644,7 @@
 				077D2F72236AB10D00DDA093 /* FlatButton+Extensions.swift in Sources */,
 				079074D922A4271600EECD2D /* MineViewController.swift in Sources */,
 				07D57CA722A4BDA900B4E8B8 /* ApiUtils.swift in Sources */,
+				077D2F79237BD79800DDA093 /* GameGridCell.swift in Sources */,
 				071C5E1E232F328E009DB0CF /* GamesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

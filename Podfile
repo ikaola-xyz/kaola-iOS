@@ -17,4 +17,5 @@ target 'game' do
     pod 'Toast-Swift', '~> 4.0.0'
     pod "Popover"
     pod "Qiniu", "~> 7.1"
+    pod "CollectionKit"
 end

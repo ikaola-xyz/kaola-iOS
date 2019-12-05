@@ -8,22 +8,43 @@
 
 import UIKit
 
-class GamesViewController: TableViewController, GamesViewDelegate {
-
+class GamesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, GamesViewDelegate {
+    
     var presenter: GamesPresenter!
     
     var games: Array<Game>!
     
-    let identifier = "GameCell"
-
+    var collectionView : UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func initViews(){
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = UICollectionView.ScrollDirection.vertical
+        layout.itemSize = CGSize(width:GameGridCell.WIDTH, height:GameGridCell.HEIGHT)
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        
+        let frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: self.view.getHeight() - 49)
+        
+        collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
+        collectionView.backgroundColor = UIColor.white
+        
+        //cell
+        self.collectionView.register(GameGridCell.self, forCellWithReuseIdentifier: "GameGridCell")
+        
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        self.view.addSubview(collectionView)
+        
         games = Array<Game>()
-        tableView.register(GameCell.self, identifier: identifier)
         
         presenter = GamesPresenter(view: self)
         presenter?.getGames()
@@ -32,22 +53,27 @@ class GamesViewController: TableViewController, GamesViewDelegate {
     func showGames(result: Array<Game>) {
         print("showGames:\(result.count)")
         self.games.append(contentsOf: result)
-        reloadData()
+        self.collectionView.reloadData()
     }
     
-    override func getItemHeight(_ position: Int) -> CGFloat {
-        return GameCell.HEIGHT
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
-    override func getItemCount() -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.games.count
     }
     
-    override func createCell(_ indexPath: IndexPath) -> UITableViewCell {
-        let position = indexPath.row
-        let game = games[position]
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! GameCell
-        cell.bindData(game: game)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell : GameGridCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameGridCell", for: indexPath) as! GameGridCell
+        let game = games[indexPath.row]
+        cell.bindData(game: game, position: indexPath.row)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let bookDetailViewController = BookDetailViewController()
+//        bookDetailViewController.book = data[indexPath.section].books[indexPath.row]
+//        self.navigationController?.pushViewController(bookDetailViewController, animated: true)
     }
 }

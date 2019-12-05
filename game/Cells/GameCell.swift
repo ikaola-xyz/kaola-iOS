@@ -10,9 +10,11 @@ import UIKit
 
 class GameCell: UITableViewCell {
 
-    static let HEIGHT : CGFloat = 60
+    static let HEIGHT : CGFloat = 180 + 32
     
     var title: UILabel!
+    
+    var cover: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +34,11 @@ class GameCell: UITableViewCell {
     }
     
     func initViews(){
+        cover = UIImageView()
+        cover.frame = CGRect(x: PADDING_DEFAULT, y: PADDING_DEFAULT, width: ScreenWidth, height: 180)
+        cover.backgroundColor = UIColor.grayLight()
+        self.contentView.addSubview(cover)
+
         title = UILabel()
         title.frame = CGRect(x: PADDING_DEFAULT, y: PADDING_DEFAULT, width: ScreenWidth - PADDING_DEFAULT * 2, height: 18)
         title.font = UIFont.boldSystemFont(ofSize: 18)

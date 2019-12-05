@@ -69,12 +69,13 @@ class EditorViewController: ToolBarViewController, ImagePickerDelegate {
     
     @objc func publish(){
         self.view.makeToastActivity(.center)
-        editorPresenter.publish(title: tfTitle.text!, content: editor.contentHTML) { isSuccess in
+        editorPresenter.publish(title: tfTitle.text!, content: editor.contentHTML) { statusCode in
             self.view.hideToastActivity()
-            if(isSuccess){
+            if(statusCode == 200){
                 self.finish()
             }else{
                 self.view.makeToast("发布失败")
+                self.push(viewController: LoginViewController())
             }
         }
     }

@@ -75,14 +75,16 @@ class ProfileViewController: ToolBarViewController, ImagePickerDelegate {
     }
     
     func didSelect(image: UIImage?) {
-        avatar.image = image
-        self.view.makeToastActivity(.center)
-        QiniuHelper.uploadImage(image: image!) { (hash) in
-            if(hash.isEmpty){
-                self.view.hideToastActivity()
-                self.view.makeToast("上传失败")
-            }else{
-                self.updateAvatar(avatar: "http://img.ikaola.xyz/"+hash)
+        if(image != nil){
+            avatar.image = image
+            self.view.makeToastActivity(.center)
+            QiniuHelper.uploadImage(image: image!) { (hash) in
+                if(hash.isEmpty){
+                    self.view.hideToastActivity()
+                    self.view.makeToast("上传失败")
+                }else{
+                    self.updateAvatar(avatar: "http://img.ikaola.xyz/"+hash)
+                }
             }
         }
     }

@@ -39,7 +39,7 @@ class StrategyModel{
         }
     }
     
-    func publish(userId: String, gameId: String, title: String, content: String, cover: String,callback: @escaping (Bool)->Void){
+    func publish(userId: String, gameId: String, title: String, content: String, cover: String,callback: @escaping (Int)->Void){
         let parameters = [
             "userId" : userId,
             "gameId" : gameId,
@@ -59,11 +59,12 @@ class StrategyModel{
                 switch response.result{
                 case .success:
                     print("publish success")
-                    callback(true)
+                    callback(200)
                 case .failure:
                     print("publish failed")
-                    callback(false)
+                    callback(401)
                 }
+                print(response)
         }
     }
 }

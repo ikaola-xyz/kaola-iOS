@@ -52,12 +52,11 @@ class StrategyCell: UITableViewCell {
         summary.frame = CGRect(x: PADDING_DEFAULT, y: title.frame.maxY + PADDING_DEFAULT, width: ScreenWidth - 90 - 10 - PADDING_DEFAULT*2, height: 68)
         summary.font = UIFont.systemFont(ofSize: 14)
         summary.numberOfLines = 3
-//        summary.backgroundColor = UIColor.green
         summary.textAlignment = .left
         
         cover = UIImageView()
         cover.frame = CGRect(x: ScreenWidth - 90 - 16, y: title.frame.maxY + PADDING_DEFAULT, width: 90, height: 68)
-        cover.backgroundColor = UIColor.green
+        cover.backgroundColor = UIColor.border()
         cover.centerCrop()
 
         avatar = UIImageView()
@@ -101,6 +100,9 @@ class StrategyCell: UITableViewCell {
         
         title.text = strategy.title
         username.text = strategy.user.nickname
+        if(strategy.user != nil && strategy.user.avatar != nil){
+            avatar.setImageWithUrl(strategy.user.avatar)
+        }
         summary.text = strategy.summary
         summary.frame = CGRect(x: PADDING_DEFAULT, y: title.frame.maxY + PADDING_DEFAULT, width: ScreenWidth - coverWidth - 10 - PADDING_DEFAULT*2, height: 68)
         summary.adjustHeight(lineSpacing: 5, numberOfLines: 3)

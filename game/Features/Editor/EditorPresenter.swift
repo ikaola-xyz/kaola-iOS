@@ -16,7 +16,7 @@ class EditorPresenter{
         self.strategyModel = StrategyModel()
     }
     
-    func publish(title: String, content: String, callback: @escaping (Bool)->Void){
+    func publish(title: String, content: String, callback: @escaping (Int)->Void){
         strategyModel.publish(userId: LoginManager.getUser().id,
                               gameId: "5cef8b7f46e0fb00017bff4d",
                               title: title,

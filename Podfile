@@ -18,4 +18,5 @@ target 'game' do
     pod "Popover"
     pod "Qiniu", "~> 7.1"
     pod "CollectionKit"
+    pod "ESPullToRefresh", '~> 2.4'
 end

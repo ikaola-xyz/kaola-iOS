@@ -24,10 +24,7 @@ class IndexViewController: TableViewController, IndexViewDelegate {
     func initViews(){
         strategies = Array<Strategy>()
         tableView.register(StrategyCell.self, identifier: identifier)
-        
-        indexPresenter = IndexPresenter(view: self)
-        indexPresenter.getStrategies()
-        
+
         let size: CGFloat = 50
         let btnCreate = UILabel()
         btnCreate.frame = CGRect(x: ScreenWidth - size - 16,
@@ -44,8 +41,13 @@ class IndexViewController: TableViewController, IndexViewDelegate {
         btnCreate.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(IndexViewController.create))
         btnCreate.addGestureRecognizer(tap)
-        
         self.view.addSubview(btnCreate)
+        
+        fixHeight()
+        setRefreshable()
+        setPageable()
+        indexPresenter = IndexPresenter(view: self)
+        onRequestData()
     }
     
     @objc func create(){
@@ -59,9 +61,17 @@ class IndexViewController: TableViewController, IndexViewDelegate {
         }
     }
     
+    override func onRequestData() {
+        indexPresenter.getStrategies(page: pageIndex)
+    }
+    
     func showStategies(result: Array<Strategy>) {
+        if(pageIndex == 1){
+            self.strategies.removeAll()
+        }
+        
         self.strategies.append(contentsOf: result)
-        reloadData()
+        reloadData(size: result.count)
     }
     
     override func getItemHeight(_ position: Int) -> CGFloat {

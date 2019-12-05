@@ -22,9 +22,9 @@ class IndexPresenter{
         self.view = view
     }
     
-    func getStrategies(){
+    func getStrategies(page: Int){
         print("IndexPresenter getStrategies")
-        model.getAll { (strategies) in
+        model.getAll(page: page, size: 20) { (strategies) in
             self.view?.showStategies(result: strategies)
         }
     }

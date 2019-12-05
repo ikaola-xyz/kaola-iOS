@@ -22,9 +22,15 @@ class StrategyModel{
         }
     }
     
-    func getAll(callback: @escaping (Array<Strategy>)->Void){
+    func getAll(page:Int, size:Int, callback: @escaping (Array<Strategy>)->Void){
         let url = ApiUtils.strategies()
-        AF.request(url)
+        
+        let parameters = [
+            "page" : String(page),
+            "size" : String(size)
+        ]
+        
+        AF.request(url, parameters: parameters)
             .validate()
             .responseJSON { response in
                 switch response.result{

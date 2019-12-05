@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ESPullToRefresh
 
 let ITEM_TYPE_NORMAL = 0
 
@@ -61,6 +62,10 @@ class TableViewController:ToolBarViewController,UITableViewDataSource,UITableVie
         self.view.addSubview(loading)
     }
     
+    func fixHeight(){
+        tableView.frame = CGRect(x: 0, y: NavgationBarHeight, width: self.view.getWidth(), height: self.view.getHeight() - NavgationBarHeight)
+    }
+    
     func setEmpty(emptyTxt: String){
         enableEmpty = true
         lbEmpty = UILabel()
@@ -86,32 +91,33 @@ class TableViewController:ToolBarViewController,UITableViewDataSource,UITableVie
     }
     
     func setRefreshable(){
-//        var header: ESRefreshProtocol & ESRefreshAnimatorProtocol & ESRefreshHeaderAnimator
-//        header = ESRefreshHeaderAnimator.init(frame: CGRect.zero)
-//        header.pullToRefreshDescription = "下拉刷新..."
-//        header.releaseToRefreshDescription = "下拉刷新..."
-//        header.loadingDescription = "正在加载..."
-//        let _ = self.tableView.es.addPullToRefresh(animator: header) { [weak self] in
-//            self?.onRefresh()
-//        }
+        var header: ESRefreshProtocol & ESRefreshAnimatorProtocol & ESRefreshHeaderAnimator
+        header = ESRefreshHeaderAnimator.init(frame: CGRect.zero)
+        header.pullToRefreshDescription = "下拉刷新..."
+        header.releaseToRefreshDescription = "下拉刷新..."
+        header.loadingDescription = "正在加载..."
+        let _ = self.tableView.es.addPullToRefresh(animator: header) { [weak self] in
+            self?.onRefresh()
+        }
     }
     
     func setPageable(){
-//        self.footerRemoved = false
-//        var footer: ESRefreshProtocol & ESRefreshAnimatorProtocol & ESRefreshFooterAnimator
-//        footer = ESRefreshFooterAnimator.init(frame: CGRect.zero)
-//        footer.loadingMoreDescription = "加载更多..."
-//        footer.loadingDescription = "正在加载..."
-//        let _ = self.tableView.es.addInfiniteScrolling(animator: footer) { [weak self] in
-//            self?.onPageing()
-//        }
+        self.footerRemoved = false
+        var footer: ESRefreshProtocol & ESRefreshAnimatorProtocol & ESRefreshFooterAnimator
+        footer = ESRefreshFooterAnimator.init(frame: CGRect.zero)
+        footer.loadingMoreDescription = "加载更多..."
+        footer.loadingDescription = "正在加载..."
+        let _ = self.tableView.es.addInfiniteScrolling(animator: footer) { [weak self] in
+            self?.onPageing()
+        }
     }
     
     func removePageFooter(){
-//        if(self.tableView.es.base.footer != nil){
-//            self.tableView.es.removeRefreshFooter()
-//            self.footerRemoved = true
-//        }
+        print("removePageFooter")
+        if(self.tableView.es.base.footer != nil){
+            self.tableView.es.removeRefreshFooter()
+            self.footerRemoved = true
+        }
     }
     
     func registerNib(_ identifier : String){
@@ -157,7 +163,7 @@ class TableViewController:ToolBarViewController,UITableViewDataSource,UITableVie
     }
     
     func onRefresh(){
-        if(footerRemoved&&pageable){
+        if(footerRemoved && pageable){
             setPageable()
         }
         pageIndex = 1
@@ -178,11 +184,18 @@ class TableViewController:ToolBarViewController,UITableViewDataSource,UITableVie
         
     }
     
+    func reloadData(size: Int){
+        if(size < 20){
+            removePageFooter()
+        }
+        reloadData()
+    }
+    
     func reloadData(){
         loading.stopAnimating()
         isLoading = false
         self.tableView.reloadData()
-//        tableView.es.stopPullToRefresh()
-//        tableView.es.stopLoadingMore()
+        tableView.es.stopPullToRefresh()
+        tableView.es.stopLoadingMore()
     }
 }

@@ -8,9 +8,9 @@ html {
 }
 
 body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
     font-family: sans-serif;
-    line-height: 1.5;
+    line-height: 1.8;
     -webkit-user-select: none;
     color: #33373d;
     fill: currentColor;
@@ -26,6 +26,8 @@ body {
 
 img{
     width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 body, h1, p {

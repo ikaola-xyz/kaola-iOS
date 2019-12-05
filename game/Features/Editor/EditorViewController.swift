@@ -111,10 +111,11 @@ class EditorViewController: ToolBarViewController, ImagePickerDelegate {
         fontMenu = EditorFontMenu()
         fontMenu.attach(editorView: editor, fromView: btnFont)
     }
-
+    
     @objc func closeEditorBar(){
         editor.endEditing(true)
         tfTitle.endEditing(true)
+        hideEditorBar()
     }
     
     @objc func showFontMenu(){
@@ -125,18 +126,23 @@ class EditorViewController: ToolBarViewController, ImagePickerDelegate {
         let info = notification.userInfo
         let keyboardRect = (info?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let options = UIView.AnimationOptions.curveEaseIn
-        
         if(notification.name == UIResponder.keyboardWillShowNotification){
-            self.editorBar.isHidden = false
-            UIView.animate(withDuration: 0.25, delay: 0, options: options, animations: {
-                if let view = self.view {
-                    self.editorBar.frame.origin.y = view.frame.height - (keyboardRect.height + self.editorBar.frame.height)
-                }
-            }, completion: nil)
+            if(self.editorBar.isHidden){
+                self.editorBar.isHidden = false
+                UIView.animate(withDuration: 0.25, delay: 0, options: options, animations: {
+                    if let view = self.view {
+                        self.editorBar.frame.origin.y = view.frame.height - (keyboardRect.height + self.editorBar.frame.height)
+                    }
+                }, completion: nil)
+            }
         }
-        else if(notification.name == UIResponder.keyboardWillHideNotification){
+    }
+    
+    func hideEditorBar(){
+        if(!self.editorBar.isHidden){
             fontMenu.dismiss()
             self.editorBar.isHidden = true
+            let options = UIView.AnimationOptions.curveEaseIn
             UIView.animate(withDuration:  0.25, delay: 0, options: options, animations: {
                 if let view = self.view {
                     self.editorBar.frame.origin.y = view.frame.height

@@ -29,6 +29,7 @@ class EditorViewController: ToolBarViewController, ImagePickerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         editorPresenter = EditorPresenter()
         initViews()
         initEditorBar()
@@ -83,7 +84,7 @@ class EditorViewController: ToolBarViewController, ImagePickerDelegate {
     func initEditorBar(){
         editorBar = UIView()
         editorBar.frame = CGRect(x: 0, y: ScreenHeight - 56, width: ScreenWidth, height: 56)
-        editorBar.backgroundColor = UIColor.gray
+        editorBar.backgroundColor = UIColor.border()
         editorBar.isHidden = true
         addSubview(editorBar)
         
@@ -96,9 +97,8 @@ class EditorViewController: ToolBarViewController, ImagePickerDelegate {
         
         btnFont = UIButton()
         btnFont.frame = CGRect(x: 56, y: 0, width: 56, height: 56)
-        btnFont.backgroundColor = UIColor.gray
         btnFont.addTarget(self, action: #selector(EditorViewController.showFontMenu), for: .touchUpInside)
-        btnFont.setTitle("A", for: .normal)
+        btnFont.setTitle("Font", for: .normal)
         editorBar.addSubview(btnFont)
         
         let btnPicture = UIButton()
@@ -107,6 +107,18 @@ class EditorViewController: ToolBarViewController, ImagePickerDelegate {
         btnPicture.addTarget(self, action: #selector(EditorViewController.addPicture), for: .touchUpInside)
         editorBar.addSubview(btnPicture)
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        
+        let btnUndo = UIButton()
+        btnUndo.frame = CGRect(x: 56 * 3, y: 0, width: 56, height: 56)
+        btnUndo.setTitle("<-", for: .normal)
+        btnUndo.addTarget(self, action: #selector(EditorViewController.undo), for: .touchUpInside)
+        editorBar.addSubview(btnUndo)
+        
+        let btnRedo = UIButton()
+        btnRedo.frame = CGRect(x: 56 * 4, y: 0, width: 56, height: 56)
+        btnRedo.setTitle("->", for: .normal)
+        btnRedo.addTarget(self, action: #selector(EditorViewController.redo), for: .touchUpInside)
+        editorBar.addSubview(btnRedo)
         
         fontMenu = EditorFontMenu()
         fontMenu.attach(editorView: editor, fromView: btnFont)
@@ -171,5 +183,15 @@ class EditorViewController: ToolBarViewController, ImagePickerDelegate {
     
     func upload(){
         
+    }
+    
+    @objc func undo(){
+        print("undo")
+        self.editor.undo()
+    }
+    
+    @objc func redo(){
+        print("redo")
+        self.editor.redo()
     }
 }

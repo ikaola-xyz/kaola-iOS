@@ -44,7 +44,7 @@ public extension UIColor{
     }
     
     class func inputView() -> UIColor{
-        return UIColor(rgba: "#EDEDED")
+        return UIColor(rgba: "#F3F3F3")
     }
     
     convenience init(rgba: String) {

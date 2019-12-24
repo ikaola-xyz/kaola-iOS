@@ -82,43 +82,55 @@ class EditorViewController: ToolBarViewController, ImagePickerDelegate {
     }
     
     func initEditorBar(){
+        let itemSize = ScreenWidth / 6
+        
         editorBar = UIView()
         editorBar.frame = CGRect(x: 0, y: ScreenHeight - 56, width: ScreenWidth, height: 56)
-        editorBar.backgroundColor = UIColor.border()
+        editorBar.backgroundColor = UIColor.white
         editorBar.isHidden = true
         addSubview(editorBar)
         
-        let btnClose = UIButton()
-        btnClose.frame = CGRect(x: 0, y: 0, width: 56, height: 56)
-        btnClose.backgroundColor = UIColor.red
-        btnClose.setTitle("-", for: .normal)
-        btnClose.addTarget(self, action: #selector(EditorViewController.closeEditorBar), for: .touchUpInside)
-        editorBar.addSubview(btnClose)
-        
         btnFont = UIButton()
-        btnFont.frame = CGRect(x: 56, y: 0, width: 56, height: 56)
+        btnFont.frame = CGRect(x: 0, y: 0, width: itemSize, height: 56)
         btnFont.addTarget(self, action: #selector(EditorViewController.showFontMenu), for: .touchUpInside)
-        btnFont.setTitle("Font", for: .normal)
+        btnFont.setImage(UIImage(named: "ic_editor_font"), for: .normal)
         editorBar.addSubview(btnFont)
         
         let btnPicture = UIButton()
-        btnPicture.frame = CGRect(x: 56 * 2, y: 0, width: 56, height: 56)
-        btnPicture.setTitle("PIC", for: .normal)
+        btnPicture.frame = CGRect(x: itemSize * 1, y: 0, width: itemSize, height: 56)
+        btnPicture.setImage(UIImage(named: "ic_editor_pic"), for: .normal)
         btnPicture.addTarget(self, action: #selector(EditorViewController.addPicture), for: .touchUpInside)
         editorBar.addSubview(btnPicture)
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         
+        let btnGame = UIButton()
+        btnGame.frame = CGRect(x: itemSize * 2, y: 0, width: itemSize, height: 56)
+        btnGame.setImage(UIImage(named: "ic_editor_game"), for: .normal)
+        btnGame.addTarget(self, action: #selector(EditorViewController.selectGame), for: .touchUpInside)
+        editorBar.addSubview(btnGame)
+        
         let btnUndo = UIButton()
-        btnUndo.frame = CGRect(x: 56 * 3, y: 0, width: 56, height: 56)
-        btnUndo.setTitle("<-", for: .normal)
+        btnUndo.frame = CGRect(x: itemSize * 3, y: 0, width: itemSize, height: 56)
+        btnUndo.setImage(UIImage(named: "ic_editor_undo"), for: .normal)
         btnUndo.addTarget(self, action: #selector(EditorViewController.undo), for: .touchUpInside)
         editorBar.addSubview(btnUndo)
         
         let btnRedo = UIButton()
-        btnRedo.frame = CGRect(x: 56 * 4, y: 0, width: 56, height: 56)
-        btnRedo.setTitle("->", for: .normal)
+        btnRedo.frame = CGRect(x: itemSize * 4, y: 0, width: itemSize, height: 56)
+        btnRedo.setImage(UIImage(named: "ic_editor_redo"), for: .normal)
         btnRedo.addTarget(self, action: #selector(EditorViewController.redo), for: .touchUpInside)
         editorBar.addSubview(btnRedo)
+        
+        let btnClose = UIButton()
+        btnClose.frame = CGRect(x: itemSize * 5, y: 0, width: itemSize, height: 56)
+        btnClose.setImage(UIImage(named: "ic_editor_close"), for: .normal)
+        btnClose.addTarget(self, action: #selector(EditorViewController.closeEditorBar), for: .touchUpInside)
+        editorBar.addSubview(btnClose)
+        
+        let divider = UIView()
+        divider.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: 1)
+        divider.backgroundColor = UIColor.border()
+        editorBar.addSubview(divider)
         
         fontMenu = EditorFontMenu()
         fontMenu.attach(editorView: editor, fromView: btnFont)
@@ -166,6 +178,10 @@ class EditorViewController: ToolBarViewController, ImagePickerDelegate {
     @objc func addPicture(){
         print("add picture")
         self.imagePicker.present(from: btnFont)
+    }
+    
+    @objc func selectGame(){
+        print("selectGame")
     }
     
     func didSelect(image: UIImage?) {

@@ -13,7 +13,7 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
     let titles = ["首页","推荐","社区","我的"]
     
     let indexViewController = IndexViewController()
-    let recommendViewController = MineViewController()
+    let recommendViewController = IndexViewController()
     let gamesViewController = GamesViewController()
     let mineViewController = MineViewController()
     

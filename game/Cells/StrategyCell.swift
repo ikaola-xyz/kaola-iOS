@@ -102,7 +102,10 @@ class StrategyCell: UITableViewCell {
         username.text = strategy.user.nickname
         if(strategy.user != nil && strategy.user.avatar != nil){
             avatar.setImageWithUrl(strategy.user.avatar)
+        }else{
+            avatar.setImageWithName("ic_default_avatar")
         }
+        
         summary.text = strategy.summary
         summary.frame = CGRect(x: PADDING_DEFAULT, y: title.frame.maxY + PADDING_DEFAULT, width: ScreenWidth - coverWidth - 10 - PADDING_DEFAULT*2, height: 68)
         summary.adjustHeight(lineSpacing: 5, numberOfLines: 3)

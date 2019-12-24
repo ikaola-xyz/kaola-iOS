@@ -58,13 +58,16 @@ class DetailViewController: ToolBarViewController, DetailViewDelegate, UIScrollV
         
         avatar = UIImageView()
         avatar.frame = CGRect(x: 16, y: lbTitle.frame.maxY + 16, width: 26, height: 26)
-        avatar.backgroundColor = UIColor.gray
-        avatar.setImageWithName("AppIcon")
+        if(strategy.user != nil && strategy.user.avatar != nil){
+            avatar.setImageWithUrl(strategy.user.avatar)
+        }else{
+            avatar.setImageWithName("ic_default_avatar")
+        }
         avatar.setOval()
         
         let lbUsername = UILabel()
         lbUsername.frame = CGRect(x:avatar.frame.maxX + 10, y: lbTitle.frame.maxY + 16 + 6, width: 100, height: 14)
-        lbUsername.text = "Eric"
+        lbUsername.text = strategy.user.nickname
 
         lbViewTotal = UILabel()
         lbViewTotal.frame = CGRect(x:16, y: avatar.frame.maxY + 16, width: 100, height: 14)
